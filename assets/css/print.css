@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Suisse Neue";
+  src: url("../fonts/SuisseNeue-Light.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
 @media print{
   :root {
     --text-size:11pt;
@@ -5,10 +11,11 @@
     --margin-bottom: 20mm;
     --margin-left: 10mm; 
     --margin-right: 10mm;
+    --fontSerif: 'Suisse Neue';
     }
   *{
     line-height: 140%;
-    font-size:16pt;
+    font-size:13pt;
   }
 
   a {
@@ -55,7 +62,8 @@
     text-indent:0px !important;
   }
   img{
-    max-width:10cm;
+    max-width:8cm;
+    max-height:12cm;
   }
   ul{
     list-style: outside;
@@ -135,7 +143,10 @@
     grid-column: 1 / 6;
   }
   .desc{
+    font-family: Suisse Neue;
     grid-column: 1 / 6;
+    orphans: 2;
+    widows: 2;
   }
   .quote{
     font-style: italic;
@@ -207,8 +218,8 @@
     
 
     size:A4;
-    margin-top: 2cm;
-    margin-bottom: 2cm;
+    margin-top: 1.5cm;
+    margin-bottom: 1.5cm;
     /*bleed: 6mm;*/
     /*marks: crop cross;*/
     margin-left: 1.5cm;
@@ -247,7 +258,7 @@
       /*text-align: left;*/
       font-size: var(--font-small);
       font-weight: 400;
-      content: string(h1);
+      /*content: string(h1);*/
       font-variant-caps: all-small-caps;
     }
 
@@ -263,7 +274,7 @@
     @top-left {
       font-family: var(--font-family-sans);
       content: string(h2);
-      text-align: center;
+      text-align: left;
       letter-spacing: 0.08em;
       font-variation-settings: "wght" 400, "opsz" 1;
       font-variant-caps: all-small-caps;
@@ -291,11 +302,10 @@
       font-weight: 500;
       @bottom-right {
       content: '';
-
-    }
+      }
     }
     @page progetto{
-      break-before: right;
+      break-before: page;
     }
  
     /*.pagedjs_pagebox:has(.casi_studio){

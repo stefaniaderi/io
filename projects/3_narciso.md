@@ -8,7 +8,4 @@ categories: [projects]
 date: 2022—2023
 description: ''
 ---
-![]({{site.baseurl}}/projects/1.jpg)
-![]({{site.baseurl}}/projects/2.jpg)
-![]({{site.baseurl}}/projects/3.jpg)
-![]({{site.baseurl}}/projects/5.jpg)
+![]({{site.baseurl}}/projects/6.jpg)
