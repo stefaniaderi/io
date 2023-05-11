@@ -1,15 +1,15 @@
 {% include header.html %}
 
 {% for page in site.pages %}
-	{% if page.categories contains 'projects' %}
+	{% if page.categories contains 'writings' %}
 		<div class="content grid">
 	  		<div class="desc">
 	    		<a href="{{site.baseurl}}{{page.url}}">
 	    			<div class="item">
 		      			<h2>{{page.title}}</h2>
-		      			<div class="info">{{page.subtitle}}<br>
+		      			{{page.subtitle}}<br>
 		      			{{page.date}} <br>
-		      			{{page.tags}} </div>
+		      			{{page.tags}}
 		      			<p>{{page.description}}</p>
 		      		</div>
 		      	</a>

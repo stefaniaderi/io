@@ -85,6 +85,10 @@ a:hover {
   position: -webkit-sticky;
 }
 
+.info {
+  color: grey;
+}
+
 .photo {
   grid-column: 4/8;
 }

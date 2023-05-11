@@ -2,10 +2,11 @@
 
 <div class="content">
 {% for page in site.pages %}
-  {% if page.categories contains 'projects' %}
+  {% if page.categories contains 'projects' or  page.categories contains 'writings' %}
     <div class="item">
       <h3>{{page.title}} <br> {{page.date}}</h3>
-      <p>{{page.content}}</p>
+      <p>{{page.description}}</p>
+      {{page.content}}
     </div>
   {% endif %}
 {% endfor %}
