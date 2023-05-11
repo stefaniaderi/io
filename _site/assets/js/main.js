@@ -13,7 +13,6 @@ menu_button.addEventListener("click", dropdownMenu);
 function dropdownMenu(){
   menu_button.classList.toggle('menu_open');
   menu.classList.toggle('show');
-  header_dropdown.classList.toggle('header_open');
 
 }
 
