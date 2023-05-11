@@ -2,6 +2,23 @@ let mybutton = document.getElementById("scroll_top");
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
 var prevScrollpos = window.pageYOffset;
 const mediaQuery = window.matchMedia('(max-width: 700px)');
+let submenu = document.querySelectorAll('.submenu li a');
+let posts = document.querySelectorAll('.content');
+
+
+//is in viewport function 
+var isInViewport = function (elem) {
+    const { top, bottom } = elem.getBoundingClientRect();
+    const vHeight = (window.innerHeight || document.documentElement.clientHeight);
+
+    return (
+    (top > 0 || bottom > 0) &&
+    top < vHeight
+  );
+};
+
+
+
 
 window.onscroll = function() {
 
@@ -17,7 +34,31 @@ window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
 
   prevScrollpos = currentScrollPos;
+
+//SCROLLING HIGLIGHT TABLE OF CONTENTS
+  let j = 0;
+  //loops for all posts
+  while (j < posts.length) {
+    let post = posts[j];
+    let postCategory = post.id;
+    if (isInViewport(post)) {
+      //loops for all menu voices
+      for (let y = 0; y < submenu.length; y++) {
+        let category = submenu[y].getAttribute('data-cat');
+        if (postCategory == category){
+          submenu[y].classList.add("active");
+        } else {
+          submenu[y].classList.remove("active");
+        }
+      }
+
+    }
+    j++;
+  }
+
 }
+
+
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
@@ -30,47 +71,5 @@ for (var i = 0; i < document.links.length; i++) {
     }
 }
 
-//SCROLLING HIGLIGHT TABLE OF CONTENTS
-function isElementInViewport (el) {
-    
-    //special bonus for those using jQuery
-    if (typeof $ === "function" && el instanceof $) {
-        el = el[0];
-    }
-    
-    var rect     = el.getBoundingClientRect(),
-        vWidth   = window.innerWidth || doc.documentElement.clientWidth,
-        vHeight  = window.innerHeight || doc.documentElement.clientHeight,
-        efp      = function (x, y) { return document.elementFromPoint(x, y) };     
-
-    // Return false if it's not in the viewport
-    if (rect.right < 0 || rect.bottom < 0 
-            || rect.left > vWidth || rect.top > vHeight)
-        return false;
-
-    // Return true if any of its four corners are visible
-    return (
-          el.contains(efp(rect.left,  rect.top))
-      ||  el.contains(efp(rect.right, rect.top))
-      ||  el.contains(efp(rect.right, rect.bottom))
-      ||  el.contains(efp(rect.left,  rect.bottom))
-    );
-}
 
 
-var handler = function(){
-  var visible = 0;
-  [1,2,3,4].forEach(function(id){
-    if(isElementInViewport($('#'+id))) visible = id;
-  })
-  
-  if(visible){
-    $('#index div').removeClass('active');
-    $('#index-'+visible).addClass('active');
-  }
-};
-
-
-
-//jQuery
-$(window).on('DOMContentLoaded load resize scroll', handler);

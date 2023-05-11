@@ -19,11 +19,11 @@
     </div>
     <ul class="bigmenu">
       {% for item in site.data.menu%}
-      <li> <a href = "{{site.baseurl}}{{item.link}}">{{item.title}} </a></li>
+      <li> {{item.title}} </li>
         <div class="submenu">
           {% for page in site.pages %}
             {% if page.categories contains {{item.category}}%}
-              <li><a href="#{{page.slug}}">{{page.title}}</a>  </li>      
+              <li><a href="#{{page.slug}}" data-cat="{{page.slug}}">{{page.title}}</a>  </li>      
             {% endif %}
           {% endfor %}
         </div>
