@@ -85,7 +85,7 @@ h2 {
 }
 .submenu li {
   padding-top: 0px;
-  padding-bottom: 0.5rem;
+  padding-bottom: calc(1rem / 2);
 }
 
 .content {
