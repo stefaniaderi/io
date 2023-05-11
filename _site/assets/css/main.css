@@ -64,8 +64,10 @@ h2 {
   background: white;
   width: min-content;
 }
-.header .title {
+.header .title a {
   padding: 1rem;
+  mix-blend-mode: normal;
+  color: black;
 }
 .header ul {
   padding-left: 1rem;
@@ -97,6 +99,9 @@ h2 {
 }
 .content > .grid {
   grid-template-columns: repeat(6, 1fr);
+}
+.content a {
+  color: black;
 }
 
 .desc {
@@ -198,17 +203,24 @@ h2 {
   border-bottom: 1px solid black;
 }
 
+.show {
+  display: block !important;
+  height: auto;
+  opacity: 1 !important;
+  transition: height 0ms 0ms, opacity 600ms 0ms;
+}
+
 @media (max-width: 768px) {
   body {
     font-size: 15px;
   }
   img {
-    max-height: 500px;
-    width: auto;
+    max-width: 96vw;
+    height: auto;
   }
   .header {
     background: none;
-    mix-blend-mode: difference;
+    mix-blend-mode: normal;
     padding: 1rem;
     margin: -1rem;
     position: fixed;
@@ -220,6 +232,9 @@ h2 {
     align-items: baseline;
     grid-column: 1/8;
   }
+  .header .title a {
+    padding: 0px;
+  }
   .header a {
     color: white;
   }
@@ -227,15 +242,22 @@ h2 {
     display: contents;
   }
   .header .title {
+    color: black;
     padding: 0px;
     grid-column: 1/2;
   }
   h3 {
     font-size: 15px;
   }
+  .bigmenu {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
   .menu:before {
-    content: "x ";
-    /*background-image: url(../icons/menu.svg);*/
+    content: "";
+    background-image: url(../icons/menu.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -244,6 +266,36 @@ h2 {
     position: fixed;
     right: 1rem;
     top: 1rem;
+  }
+  .menu_dropdown {
+    display: none;
+    width: 100% !important;
+    height: 100% !important;
+    margin: -1rem;
+    padding: 1rem;
+    top: 1rem;
+    left: 1rem;
+    background: white;
+    line-height: 160%;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    position: fixed;
+  }
+  .menu_dropdown li {
+    display: list-item;
+  }
+  .menu_open:before {
+    background-image: url(../icons/close.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: " ";
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: fixed;
+    right: 1rem;
+    z-index: 1;
   }
   .content {
     padding-top: 4rem;

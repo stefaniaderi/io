@@ -75,8 +75,10 @@ h2{
   height: 100vh;
   background: white;
   width: min-content;
-  .title{
+  .title a{
     padding: $padding;
+    mix-blend-mode: normal;
+    color: $bodyColor;
   }
   ul {
     padding-left: $padding;
@@ -109,7 +111,9 @@ h2{
   > .grid{
     $columns: 6;
       grid-template-columns: repeat($columns, 1fr);
-
+  }
+  a {
+    color: $bodyColor;
   }
 }
 
@@ -212,6 +216,12 @@ h2{
     border-bottom: $border;
   }
 }
+.show {
+  display: block!important;
+  height: auto;
+  opacity: 1!important;
+  transition: height 0ms 0ms, opacity 600ms 0ms;
+}
 
 @media (max-width: 768px){
   $headerHeight: 2rem;
@@ -220,12 +230,12 @@ h2{
     font-size: $fontSize;
   }
   img{
-    max-height: 500px;
-    width: auto;
+    max-width: 96vw;
+    height: auto;
   }
   .header{
     background: none;
-    mix-blend-mode: difference;
+    mix-blend-mode: normal;
     padding: $padding; 
     margin: -1rem;
     position: fixed;
@@ -236,7 +246,9 @@ h2{
     transition: $transition;
     align-items: baseline;
     grid-column: 1 / 8;
-
+    .title a{
+    padding: 0px;
+    }
     a {
     color: white;
     }
@@ -244,18 +256,25 @@ h2{
     display: contents;
     }
     .title{
-    padding: 0px;
-    grid-column: 1 / 2;
-    }
+      color: $bodyColor;
+      padding: 0px;
+      grid-column: 1 / 2;
+      }
   }
 
 
   h3{
     font-size: $fontSize;
   }
+  .bigmenu{
+    display: none;
+  }
+  .menu{
+    display: block;
+  }
   .menu:before {
-    content: "x ";
-    /*background-image: url(../icons/menu.svg);*/
+    content: "";
+    background-image: url(../icons/menu.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -265,6 +284,37 @@ h2{
     right: $padding;
     top: $padding;
   }
+  .menu_dropdown{
+    display: none;
+    width: 100% !important;
+    height: 100% !important;
+    margin: -1rem;
+    padding: $padding;
+    top: $padding;
+    left: $padding;
+    background: white;
+    line-height: 160%;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    position: fixed;
+    li {
+      display: list-item;  
+    }
+  }
+
+  .menu_open:before {
+    background-image: url(../icons/close.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: " ";
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: fixed;
+    right: $padding;
+    z-index: 1;
+}
   .content{
     padding-top:  ($headerHeight * 2 );
     grid-column: 1 / 8;
@@ -284,4 +334,6 @@ h2{
     top: $headerHeight * 2;
   }
 }
+
+
 

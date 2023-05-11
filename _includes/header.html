@@ -32,8 +32,15 @@
     <div class="menu"> 
         <ul class="menu_dropdown">
       {% for item in site.data.menu%}
-      <li> <a href="{{site.baseurl}}{{item.link}}"> {{item.title}} </li></a>
-        {% endfor %}
+      <li> {{item.title}} </li>
+        <div class="submenu">
+          {% for page in site.pages %}
+            {% if page.categories contains {{item.category}}%}
+            <li><a href="{{site.url}}{{site.baseurl}}#{{page.slug}}" data-cat="{{page.slug}}">{{page.title}}</a>  </li>      
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endfor %}
     </ul>
       </div>
   </div>
