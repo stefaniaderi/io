@@ -1,0 +1,27 @@
+{% include head.html %}
+<div class="grid">
+  <div id="copertina">
+    <h1>Portfolio </h1>
+    Stefania D'Eri <br>
+    {{ "now" | date: "%Y" }}
+  </div>
+</div>
+
+{% for page in site.pages %}
+  {% if page.categories contains 'projects' %}    
+<div class="grid" id="progetto">
+  <div class="dati">
+    <h2>{{page.title}}</h2>
+    <h3>{{page.subtitle}}</h3>
+    <div class="info">
+      {{page.date}} <br>
+      {{page.tags}}
+    </div>
+  </div>
+  <div class="desc">{{page.description}}</div>
+  {{page.content}} 
+</div>
+  {% endif %}
+{% endfor %}
+
+{% include foot.html %}

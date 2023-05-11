@@ -1,0 +1,315 @@
+@media print{
+  :root {
+    --text-size:11pt;
+    --margin-top: 20mm;
+    --margin-bottom: 20mm;
+    --margin-left: 10mm; 
+    --margin-right: 10mm;
+    }
+  *{
+    line-height: 140%;
+    font-size:16pt;
+  }
+
+  a {
+    color:var(--color-text);
+  }
+  em {
+    /*font-family: var(--font-family-sans);*/
+    font-size:unset;
+  }
+  .grid ol{
+    grid-column: 1 / 7;
+  }
+  p{
+    text-indent: 2rem;
+    font-variation-settings: "wght" 420, "opsz" 20;
+    margin-bottom: 0px !important;
+
+    /*text-align: justify;*/
+    orphans: 2;
+    widows: 2;
+    /*-webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;*/
+
+  }
+  p :first-of-type{
+    text-indent: 0px;
+    padding: 0px !important;
+
+  }
+ :not(p) + p {
+    text-indent:0px;
+    padding-top:1rem;
+  }
+
+  p + p,  p + li, p + ol, ol + p{ padding: 0px !important;
+  }
+ 
+  p + :not(p){
+    padding-top:1rem;
+    padding-bottom:2rem;
+  }
+  p:has(img){
+    text-indent:0px !important;
+  }
+  img{
+    max-width:10cm;
+  }
+  ul{
+    list-style: outside;
+    padding-left: 2rem;
+  }
+  ol{
+    /*font-variation-settings: "wght" 420, "opsz" 12;
+    line-height: 120%;*/
+  }
+  li{
+    /*text-indent: 1rem;*/
+    /*list-style-type: "– ";*/
+    /*text-align: justify;*/
+
+    orphans: 2;
+    /*border-top: var(--border);*/
+  }
+/*ul + p{
+  padding-top: 1rem;
+}*/
+  .loop_post{
+    padding: 0;
+  }
+  .header{
+    display: none;
+  }
+  h1 {
+    orphans: 2;
+    widows: 2;
+    string-set: h1 content(text);
+    break-before: page;
+    font-size:2rem;
+    padding:0rem 0rem 0rem 0;
+    font-weight:400;
+    /*position: running(titleRunning);*/
+    font-family: var(--font-family-sans);
+
+  }
+  h2 {
+    padding: 0rem 0rem 0rem !important;
+    justify-self: center;
+    string-set: h2 content(text);
+    /*margin-left: -69pt;*/
+    text-align: left;
+    /*padding: 1rem 0rem 0rem 0rem;*/
+    font-weight: 400;
+    font-variation-settings: "wght" 510,"opsz" 30;
+    line-height: 100%;
+    font-family: var(--font-family-titles);
+  }
+  h3{
+    string-set: h3 content(text);
+    /* font-variation-settings: "wght" 510,"opsz" 30; */
+    font-variant: all-small-caps;
+    letter-spacing: 0.04rem;
+    /*margin-left: -91px;*/
+    font-size: 1rem;
+    /*padding-bottom: 1rem;*/
+    font-variation-settings: "wght" 513,"opsz" 10;
+    font-family: var(--font-family-titles);
+
+  }
+  h4{
+    font-family: var(--font-family-sans);
+    font-weight: 400;
+    font-size:1rem;
+    padding-bottom:1rem;
+  }
+  #copertina{
+    page: copertina;
+    grid-column: 6 / 8;
+  }
+  #progetto{
+    page: progetto;
+  }
+  .dati{
+    grid-column: 1 / 6;
+  }
+  .desc{
+    grid-column: 1 / 6;
+  }
+  .quote{
+    font-style: italic;
+    /*font-size:1.2rem;*/
+  }
+
+  .ftn-call{
+    position: relative;
+    counter-increment: ftn-call;
+    padding: 10px
+  }
+  .ftn-call:before{
+    content: counter(ftn-call)".";
+  }
+  .footnotes{
+    position: relative;
+    counter-increment: ftn;
+    padding: 10px;
+  }
+  .footnotes:before{
+    content: counter(ftn)".";
+  }
+  .footnote {
+    float: footnote;
+    font-variant-numeric: lining-nums;
+    font-family: var(--font-family-sans);
+    font-size: var(--font-small);
+    line-height: 120% !important;
+    /*-webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;*/
+    /*column-count: 2;*/
+    /*column-rule: var(--border);*/
+  }
+
+  }
+  ::footnote-call {
+    font-variant-numeric: lining-nums;
+    color: var(--color-white);
+    background: var(--color-text); 
+    padding: 0em 0.3em 0em;
+    font-family: var(--font-family-sans);
+    line-height: 0;
+    font-size: 0.5rem; 
+    border-radius: 1rem;
+    position: relative;
+    top: -0.2em;
+  }
+
+
+  ::footnote-marker {
+    font-variant-numeric: lining-nums;
+    color: var(--color-white);
+    background: var(--color-text); 
+    padding: 0em 0.3em 0em;
+    font-family: var(--font-family-sans);
+    line-height: 0;
+    font-size: 0.5rem; 
+    border-radius: 1rem;
+    position: relative;
+    top: -0.2em;
+
+  }
+
+
+
+  
+  @page {
+    
+
+    size:A4;
+    margin-top: 2cm;
+    margin-bottom: 2cm;
+    /*bleed: 6mm;*/
+    /*marks: crop cross;*/
+    margin-left: 1.5cm;
+    margin-right: 1cm;
+    
+    }
+    .pagedjs_margin-content{
+      font-size:8pt;
+    }
+     #casi-studio {
+        page: casi-studio;
+      }
+    #intervista {
+        page: intervista;
+      }
+
+    .pagedjs_margin-content {
+    font-size: 0.8rem;
+    }
+  
+  @page:left {
+    /*background: rgb(189,189,189);*/
+    /*background: linear-gradient(-90deg, rgb(198,192,180) 0%, rgb(231,222,221) 2%, rgb(244,237,232) 4%, rgb(255,251,250) 10%);*/
+
+    @top-left {
+      font-family: var(--font-family-sans);
+      font-variant-numeric: lining-nums;
+      font-variant-caps: all-small-caps;
+    }
+
+    @top-center{
+
+      font-family: var(--font-family-sans);
+      letter-spacing: 0.08em;
+      font-variation-settings: "wght" 400,"opsz" 1;
+      /*text-align: left;*/
+      font-size: var(--font-small);
+      font-weight: 400;
+      content: string(h1);
+      font-variant-caps: all-small-caps;
+    }
+
+    @bottom-left {
+      content: counter(page);
+
+    }
+     
+    }
+  @page:right {
+    /*background: rgb(189,189,189);*/
+    /*background: linear-gradient(90deg, rgb(198,192,180) 0%, rgb(231,222,221) 2%, rgb(244,237,232) 4%, rgb(255,251,250) 10%);*/
+    @top-left {
+      font-family: var(--font-family-sans);
+      content: string(h2);
+      text-align: center;
+      letter-spacing: 0.08em;
+      font-variation-settings: "wght" 400, "opsz" 1;
+      font-variant-caps: all-small-caps;
+
+
+    }
+
+
+    @top-right {
+      font-family: var(--font-family-sans);
+      font-variant-numeric: lining-nums;
+      text-align: right;
+      font-variant-caps: all-small-caps;
+
+    }
+    @bottom-right {
+      content: counter(page);
+
+    }
+
+  }
+
+
+    @page copertina {
+      font-weight: 500;
+      @bottom-right {
+      content: '';
+
+    }
+    }
+    @page progetto{
+      break-before: right;
+    }
+ 
+    /*.pagedjs_pagebox:has(.casi_studio){
+    background: rgb(166, 166, 166);
+    }
+
+
+    main:has(.casi_studio){
+      color:var(--color-white);
+    }*/
+}
+}
+
+
+
+
+

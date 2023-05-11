@@ -236,17 +236,17 @@ h2{
     transition: $transition;
     align-items: baseline;
     grid-column: 1 / 8;
-   a {
+
+    a {
     color: white;
     }
-
-   li {
+    li {
     display: contents;
-  }
-  .title{
+    }
+    .title{
     padding: 0px;
     grid-column: 1 / 2;
-  }
+    }
   }
 
 
@@ -284,3 +284,4 @@ h2{
     top: $headerHeight * 2;
   }
 }
+
