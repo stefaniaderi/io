@@ -16,7 +16,7 @@ body ::selection {
 }
 
 img {
-  max-width: 1080px;
+  max-width: 900px;
 }
 
 li {
@@ -57,8 +57,8 @@ h2 {
   margin: -1rem;
   position: fixed;
   height: 100vh;
-  grid-column: 1/2;
   background: white;
+  width: min-content;
 }
 .header .title {
   padding: 1rem;
@@ -76,10 +76,14 @@ h2 {
   font-weight: bold;
 }
 
+.submenu {
+  padding-left: 1rem;
+}
+
 .content {
   grid-column: 2/8;
 }
-.content .content .grid {
+.content > .grid {
   grid-template-columns: repeat(6, 1fr);
 }
 
@@ -157,7 +161,7 @@ h2 {
 }
 
 .footer {
-  grid-column: 1/9;
+  grid-column: 1/8;
   padding: 1rem;
   margin: -1rem;
   position: sticky;
@@ -171,7 +175,7 @@ h2 {
 
 .menu {
   padding: 0px 0px 1rem 1rem;
-  grid-column: 6/9;
+  grid-column: 6/8;
   display: none;
   align-items: end;
 }

@@ -31,7 +31,7 @@ main{
 
 }
 img {
-  max-width:1080px;
+  max-width:900px;
 }
 
 li {
@@ -70,8 +70,8 @@ h2{
   margin: -1rem;
   position: fixed;
   height: 100vh;
-  grid-column: 1 / 2;
   background: white;
+  width: min-content;
   .title{
     padding: $padding;
   }
@@ -87,14 +87,21 @@ h2{
   color: $bodyColor !important;
   font-weight: bold;
 }
+
+.submenu{
+  padding-left: $padding;
+}
+
+
 .content{
   grid-column: 2 / 8;
-  .content .grid{
+  > .grid{
     $columns: 6;
-    grid-template-columns: repeat($columns, 1fr);
+      grid-template-columns: repeat($columns, 1fr);
 
   }
 }
+
 .desc {
   grid-column: 1 / 3;
   > * {
@@ -169,7 +176,7 @@ h2{
 }
 
 .footer{
-  grid-column: 1 / 9;
+  grid-column: 1 / 8;
   padding: $padding;
   margin: -1rem;
   position: sticky;
@@ -184,7 +191,7 @@ h2{
 
 .menu{
   padding: 0px 0px $padding $padding;
-  grid-column: 6 / 9;
+  grid-column: 6 / 8;
   display: none;
   align-items: end;
   & ul {

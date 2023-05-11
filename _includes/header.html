@@ -20,10 +20,10 @@
     <ul>
       {% for item in site.data.menu%}
       <li> {{item.title}} </li>
-        <div>
+        <div class="submenu">
           {% for page in site.pages %}
             {% if page.categories contains {{item.category}}%}
-              <a href="#{{page.slug}}">{{page.title}}</p>         
+              <li><a href="#{{page.slug}}">{{page.title}}</a>  </li>      
             {% endif %}
           {% endfor %}
         </div>
