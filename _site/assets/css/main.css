@@ -4,6 +4,10 @@
   font-weight: 400;
   font-style: normal;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 15px;
   background: #ffffff;
@@ -89,7 +93,6 @@ h2 {
 }
 
 .content {
-  scroll-behavior: smooth;
   grid-column: 2/8;
 }
 .content > .grid {

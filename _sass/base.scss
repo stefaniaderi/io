@@ -16,6 +16,9 @@ $border: 1px solid $bodyColor;
 $highlight: blue;
 $transition: 0.5s;
 $headerHeight: $padding;
+html{
+  scroll-behavior:smooth;
+}
 
 body {
   font-size: $fontSize;
@@ -102,7 +105,6 @@ h2{
 
 
 .content{
-  scroll-behavior: smooth;
   grid-column: 2 / 8;
   > .grid{
     $columns: 6;
