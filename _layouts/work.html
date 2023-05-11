@@ -1,21 +1,26 @@
 {% include header.html %}
 
+{% include header.html %}
+
 {% for page in site.pages %}
-	{% if page.categories contains 'projects' %}
-		<div class="content grid">
-	  		<div class="desc">
-	    		<a href="{{site.baseurl}}{{page.url}}">
-	    			<div class="item">
-		      			<h2>{{page.title}}</h2>
-		      			<div class="info">{{page.subtitle}}<br>
-		      			{{page.date}} <br>
-		      			{{page.tags}} </div>
-		      			<p>{{page.description}}</p>
-		      		</div>
-		      	</a>
-			</div>
-		    <div class="photo">{{page.content}} </div>
-		</div>
+  {% if page.categories contains 'projects' %}    
+    <div class="content" id="{{page.slug}}">
+      <div class="grid">
+          <div class="desc">
+            <a name="{{page.slug}}">
+              <div class="item">
+                  <h2>{{page.title}}</h2>
+                  <div class="info">{{page.subtitle}}<br>
+                  {{page.date}} <br>
+                  {{page.tags}} </div>
+                  <p>{{page.description}}</p>
+                </div>
+              </a>
+        </div>
+          <div class="photo">{{page.content}} </div>
+      </div>
+    </div>
   {% endif %}
 {% endfor %}
+{% include footer.html %}
 {% include footer.html %}

@@ -89,6 +89,7 @@ h2 {
 }
 
 .content {
+  scroll-behavior: smooth;
   grid-column: 2/8;
 }
 .content > .grid {

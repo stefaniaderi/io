@@ -19,7 +19,7 @@
     </div>
     <ul class="bigmenu">
       {% for item in site.data.menu%}
-      <li> {{item.title}} </li>
+      <li> <a href = "{{site.baseurl}}{{item.link}}">{{item.title}} </a></li>
         <div class="submenu">
           {% for page in site.pages %}
             {% if page.categories contains {{item.category}}%}
