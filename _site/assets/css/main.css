@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-size: 15px;
+  font-size: 14px;
   background: #ffffff;
   color: black;
   font-family: "Suisse";
@@ -247,7 +247,7 @@ h2 {
     grid-column: 1/2;
   }
   h3 {
-    font-size: 15px;
+    font-size: 14px;
   }
   .bigmenu {
     display: none;
