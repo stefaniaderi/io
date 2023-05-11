@@ -19,13 +19,13 @@
     </div>
     <ul>
       {% for item in site.data.menu%}
-      <li> <a href="{{site.baseurl}}/{{item.link}}"> {{item.title}} </li></a>
+      <li> <a href="{{site.baseurl}}{{item.link}}"> {{item.title}} </li></a>
         {% endfor %}
     </ul>
     <div class="menu"> 
         <ul class="menu_dropdown">
       {% for item in site.data.menu%}
-      <li> <a href="{{site.baseurl}}/{{item.link}}"> {{item.title}} </li></a>
+      <li> <a href="{{site.baseurl}}{{item.link}}"> {{item.title}} </li></a>
         {% endfor %}
     </ul>
       </div>
