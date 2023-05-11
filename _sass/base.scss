@@ -227,7 +227,7 @@ h2{
   $headerHeight: 2rem;
   $fontSixe: 2rem;
   body{
-    font-size: $fontSize;
+    font-size: 18px;
   }
   img{
     max-width: 96vw;
@@ -271,6 +271,7 @@ h2{
   }
   .menu{
     display: block;
+    grid-column: 7 / 8;
   }
   .menu:before {
     content: "";
@@ -281,15 +282,16 @@ h2{
     width: 1.5rem;
     height: 1.5rem;
     position: fixed;
-    right: $padding;
+    right: calc(#{$padding} * 2);
     top: $padding;
   }
   .menu_dropdown{
     display: none;
-    width: 100% !important;
-    height: 100% !important;
+    width: 96vw !important;
+    height: 100vh !important;
     margin: -1rem;
     padding: $padding;
+    padding-top: 4rem;
     top: $padding;
     left: $padding;
     background: white;
@@ -299,6 +301,7 @@ h2{
     position: fixed;
     li {
       display: list-item;  
+      margin-right: 2rem;
     }
   }
 
@@ -312,12 +315,12 @@ h2{
     width: 1.5rem;
     height: 1.5rem;
     position: fixed;
-    right: $padding;
+    right: calc(#{$padding} * 2);
     z-index: 1;
 }
   .content{
     padding-top:  ($headerHeight * 2 );
-    grid-column: 1 / 8;
+    grid-column: 1 / 9;
   }
   .photo{
     grid-column: 1 / 8;

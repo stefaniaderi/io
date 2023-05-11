@@ -212,7 +212,7 @@ h2 {
 
 @media (max-width: 768px) {
   body {
-    font-size: 15px;
+    font-size: 18px;
   }
   img {
     max-width: 96vw;
@@ -254,6 +254,7 @@ h2 {
   }
   .menu {
     display: block;
+    grid-column: 7/8;
   }
   .menu:before {
     content: "";
@@ -264,15 +265,16 @@ h2 {
     width: 1.5rem;
     height: 1.5rem;
     position: fixed;
-    right: 1rem;
+    right: calc(1rem * 2);
     top: 1rem;
   }
   .menu_dropdown {
     display: none;
-    width: 100% !important;
-    height: 100% !important;
+    width: 96vw !important;
+    height: 100vh !important;
     margin: -1rem;
     padding: 1rem;
+    padding-top: 4rem;
     top: 1rem;
     left: 1rem;
     background: white;
@@ -283,6 +285,7 @@ h2 {
   }
   .menu_dropdown li {
     display: list-item;
+    margin-right: 2rem;
   }
   .menu_open:before {
     background-image: url(../icons/close.svg);
@@ -294,12 +297,12 @@ h2 {
     width: 1.5rem;
     height: 1.5rem;
     position: fixed;
-    right: 1rem;
+    right: calc(1rem * 2);
     z-index: 1;
   }
   .content {
     padding-top: 4rem;
-    grid-column: 1/8;
+    grid-column: 1/9;
   }
   .photo {
     grid-column: 1/8;
