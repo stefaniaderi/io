@@ -2,6 +2,7 @@
 title: Rappresentazione et esercizio
 subtitle: 
 layout: project
+slug: thesis
 tags: installazione, graphic design, 3d
 categories: [projects]
 date: 2022—2023

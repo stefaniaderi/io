@@ -19,8 +19,15 @@
     </div>
     <ul>
       {% for item in site.data.menu%}
-      <li> <a href="{{site.baseurl}}{{item.link}}"> {{item.title}} </li></a>
-        {% endfor %}
+      <li> {{item.title}} </li>
+        <div>
+          {% for page in site.pages %}
+            {% if page.categories contains {{item.category}}%}
+              <a href="#{{page.slug}}">{{page.title}}</p>         
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endfor %}
     </ul>
     <div class="menu"> 
         <ul class="menu_dropdown">

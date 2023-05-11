@@ -1,14 +1,20 @@
 {% include header.html %}
 
-<div class="content">
 {% for page in site.pages %}
-  {% if page.categories contains 'projects' or  page.categories contains 'writings' %}
-    <div class="item">
-      <h3>{{page.title}} <br> {{page.date}}</h3>
-      <p>{{page.description}}</p>
-      {{page.content}}
+  {% if page.categories contains 'projects' or  page.categories contains 'writings' %}    <div class="content grid" id="{{page.slug}}">
+        <div class="desc">
+          <a name="{{page.slug}}">
+            <div class="item">
+                <h2>{{page.title}}</h2>
+                <div class="info">{{page.subtitle}}<br>
+                {{page.date}} <br>
+                {{page.tags}} </div>
+                <p>{{page.description}}</p>
+              </div>
+            </a>
+      </div>
+        <div class="photo">{{page.content}} </div>
     </div>
   {% endif %}
 {% endfor %}
-</div>
 {% include footer.html %}

@@ -1,6 +1,8 @@
-- title: Work
+- title: Projects
+  category: 'projects'
   link: /projects/projects.html
 - title: Writings
+  category: 'writings'
   link: /writings/writings.html
 - title: About
   link: /about/about.html

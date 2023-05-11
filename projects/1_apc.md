@@ -2,6 +2,7 @@
 layout: project
 title: Al Perpetuo Crepuscolo
 subtitle: 
+slug: apc
 tags: curatela, graphic design, web design, development
 categories: [projects]
 date: 2022—2023

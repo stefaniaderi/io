@@ -9,7 +9,7 @@
 $backgroundColor: #ffffff;
 $bodyColor: black;
 $bodyFont: 'Suisse';
-$fontSize: 18px;
+$fontSize: 15px;
 $padding: 1rem;
 $gutter: $padding;
 $border: 1px solid $bodyColor;
@@ -47,6 +47,10 @@ a {
   }
 }
 
+h2{
+  font-size: 1.5rem;
+  margin:0px;
+}
 .grid {
   $columns: 8;
   display: grid;
@@ -66,7 +70,7 @@ a {
   margin: -1rem;
   position: fixed;
   height: 100vh;
-  grid-column: 1 / 3;
+  grid-column: 1 / 2;
   background: white;
   .title{
     padding: $padding;
@@ -85,9 +89,14 @@ a {
 }
 .content{
   grid-column: 2 / 8;
+  .content .grid{
+    $columns: 6;
+    grid-template-columns: repeat($columns, 1fr);
+
+  }
 }
 .desc {
-  grid-column: 1 / 4;
+  grid-column: 1 / 3;
   > * {
   position: sticky;
   top:$padding;
@@ -99,7 +108,7 @@ a {
   color: grey;
 }
 .photo{
-  grid-column: 4 / 8;
+  grid-column: 3 / 6;
 }
 
 /*.header{
