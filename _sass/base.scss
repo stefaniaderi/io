@@ -43,7 +43,7 @@ li {
 a {  
   text-decoration: none;
   text-underline-offset: 0.3rem;
-  color: $bodyColor;
+  color: $highlight;
   &:hover {
     color:$highlight;
     transition: $transition;

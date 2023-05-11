@@ -30,7 +30,7 @@ li {
 a {
   text-decoration: none;
   text-underline-offset: 0.3rem;
-  color: black;
+  color: blue;
 }
 a:hover {
   color: blue;
