@@ -4,6 +4,7 @@
 {% for page in site.pages %}
   {% if page.categories contains 'projects' %}
     <div class="item">
+      <h3>{{page.title}} <br> {{page.date}}</h3>
       <p>{{page.content}}</p>
     </div>
   {% endif %}
