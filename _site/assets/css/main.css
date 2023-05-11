@@ -76,8 +76,16 @@ h2 {
   font-weight: bold;
 }
 
+.bigmenu li {
+  padding-top: 1rem;
+}
+
 .submenu {
   padding-left: 1rem;
+}
+.submenu li {
+  padding-top: 0px;
+  padding-bottom: 0.5rem;
 }
 
 .content {

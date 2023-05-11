@@ -88,8 +88,16 @@ h2{
   font-weight: bold;
 }
 
+.bigmenu li{
+    padding-top: $padding;
+}
+
 .submenu{
   padding-left: $padding;
+  li {
+    padding-top: 0px;
+    padding-bottom: calc($padding / 2) ;
+  }
 }
 
 
