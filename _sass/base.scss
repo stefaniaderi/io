@@ -1,0 +1,255 @@
+
+@font-face {
+  font-family: "Suisse";
+  src: url("../fonts/SuisseIntl-Book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+$backgroundColor: #ffffff;
+$bodyColor: black;
+$bodyFont: 'Suisse';
+$fontSize: 18px;
+$padding: 1rem;
+$gutter: $padding;
+$border: 1px solid $bodyColor;
+$highlight: blue;
+$transition: 0.5s;
+$headerHeight: $padding;
+
+body {
+  font-size: $fontSize;
+  background: $backgroundColor;
+  color: $bodyColor;
+  font-family: $bodyFont;
+  & ::selection{
+    background: $highlight;
+    color: white;
+  }
+}
+main{ 
+
+}
+img {
+  max-width:1080px;
+}
+
+li {
+  list-style: none;
+}
+a {  
+  text-decoration: none;
+  text-underline-offset: 0.3rem;
+  color: $bodyColor;
+  &:hover {
+    color:$highlight;
+    transition: $transition;
+  }
+}
+
+.grid {
+  $columns: 8;
+  display: grid;
+  grid-gap: $gutter;
+  grid-template-columns: repeat($columns, 1fr);
+  & p{
+    grid-column: 1 / 8;
+    padding-bottom: $padding;
+  }
+  & > .column {
+  margin-bottom: 1rem;
+  grid-column: span $columns;
+  } 
+}
+.header{
+  padding: $padding; 
+  margin: -1rem;
+  position: fixed;
+  height: 100vh;
+  grid-column: 1 / 3;
+  background: white;
+  .title{
+    padding: $padding;
+  }
+  ul {
+    padding-left: $padding;
+    color: grey ;
+  }
+  li>a{
+    color: grey ;
+  }
+}
+.active {
+  color: $bodyColor !important;
+  font-weight: bold;
+}
+.content{
+  grid-column: 2 / 8;
+}
+.desc {
+  grid-column: 1 / 4;
+  > * {
+  position: sticky;
+  top:$padding;
+  display:block;
+  position: -webkit-sticky;
+  }
+}
+.photo{
+  grid-column: 4 / 8;
+}
+
+/*.header{
+  mix-blend-mode: difference;
+  padding: $padding; 
+  margin: -1rem;
+  position: fixed;
+  line-height: 140%;
+  width: 100%;
+  height: $headerHeight;
+  transition: $transition;
+  align-items: baseline;
+  & a {
+    color: white;
+;
+  }
+  & ul {
+    display: contents;
+  }
+  .title{
+    grid-column: 1 / 4;
+  }
+}*/
+
+#scroll_top {
+  mix-blend-mode: plus-lighter;
+  height: 1rem;
+  width: 1rem;
+  display: none;
+  opacity: 0;
+  position: fixed;
+  bottom: 2rem;
+  z-index: 104;
+  border: $border;
+  outline: none;
+  background-color:lightgoldenrodyellow;
+  color: grey;
+  cursor: pointer;
+  padding: $padding;
+  border-radius: 6rem;
+  /* filter: drop-shadow(0px 0px 6px $color-light); */
+  transition: $transition;
+  content: "";
+  align-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
+  right: $padding;
+  filter: blur(9px);
+}
+
+
+.item h3{
+  color: $bodyColor;
+  top: $headerHeight;
+  mix-blend-mode: difference;
+}
+
+.footer{
+  grid-column: 1 / 9;
+  padding: $padding;
+  margin: -1rem;
+  position: sticky;
+  z-index: 103;
+  margin-top: 1rem;
+  line-height: 140%;
+  & > .column {
+    $columns: 2;
+    grid-column: span $columns;  
+  }
+}
+
+.menu{
+  padding: 0px 0px $padding $padding;
+  grid-column: 6 / 9;
+  display: none;
+  align-items: end;
+  & ul {
+    width: 100%;
+  }
+  & li{
+    border-bottom: $border;
+  }
+}
+
+@media (max-width: 768px){
+  $headerHeight: 2rem;
+  $fontSixe: 2rem;
+  body{
+    font-size: $fontSize;
+  }
+  img{
+    max-height: 500px;
+    width: auto;
+  }
+  .header{
+    background: none;
+    mix-blend-mode: difference;
+    padding: $padding; 
+    margin: -1rem;
+    position: fixed;
+    z-index: 100;
+    line-height: 140%;
+    width: 100%;
+    height: $headerHeight;
+    transition: $transition;
+    align-items: baseline;
+    grid-column: 1 / 8;
+   a {
+    color: white;
+    }
+
+   li {
+    display: contents;
+  }
+  .title{
+    padding: 0px;
+    grid-column: 1 / 2;
+  }
+  }
+
+
+  h3{
+    font-size: $fontSize;
+  }
+  .menu:before {
+    content: "x ";
+    /*background-image: url(../icons/menu.svg);*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: fixed;
+    right: $padding;
+    top: $padding;
+  }
+  .content{
+    padding-top:  ($headerHeight * 2 );
+    grid-column: 1 / 8;
+  }
+  .photo{
+    grid-column: 1 / 8;
+
+  }
+  .desc{
+    grid-column: 1 / 8; 
+    & > *{
+      position: relative;
+      grid-column: 1 / 8;
+    }
+  }
+  .item h3{
+    top: $headerHeight * 2;
+  }
+}

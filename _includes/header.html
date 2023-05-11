@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <title>{{ site.title }} | {{page.title}} </title>
+  <link rel="shortcut icon" type="image/x-icon" href="<?= url('favicon.ico') ?>">
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+</head>
+<body>
+<div onclick="topFunction()" id="scroll_top"> </div>
+<div class="grid">
+  <div class="header">
+    <div class="title">
+     <a href="{{ site.url }}">{{ site.title }} </a>
+    </div>
+    <ul>
+      {% for item in site.data.menu%}
+      <li> <a href="{{item.link}}"> {{item.title}} </li></a>
+        {% endfor %}
+    </ul>
+    <div class="menu"> 
+        <ul class="menu_dropdown">
+      {% for item in site.data.menu%}
+      <li> <a href="{{item.link}}"> {{item.title}} </li></a>
+        {% endfor %}
+    </ul>
+      </div>
+  </div>
+</div>
+
+<main class="grid">

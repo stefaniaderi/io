@@ -1,0 +1,20 @@
+{% include header.html %}
+
+{% for page in site.pages %}
+	{% if page.categories contains 'projects' %}
+		<div class="content grid">
+	  		<div class="desc">
+	    		<a href="{{site.url}}{{page.url}}">
+	    			<div class="item">
+		      			<h3>{{page.title}}</h3>
+		      			{{page.date}} <br>
+		      			{{page.tags}}
+		      			<p>{{page.description}}</p>
+		      		</div>
+		      	</a>
+			</div>
+		    <div class="photo">{{page.content}} </div>
+		</div>
+  {% endif %}
+{% endfor %}
+{% include footer.html %}
