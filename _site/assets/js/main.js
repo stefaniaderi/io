@@ -2,9 +2,19 @@ let mybutton = document.getElementById("scroll_top");
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
 var prevScrollpos = window.pageYOffset;
 const mediaQuery = window.matchMedia('(max-width: 700px)');
+const menu_button = document.querySelector('.menu');
+const menu = document.querySelector('.menu_dropdown');
 let submenu = document.querySelectorAll('.submenu li a');
 let posts = document.querySelectorAll('.content');
 
+//MENU RESPONSIVE
+menu_button.addEventListener("click", dropdownMenu);
+
+function dropdownMenu(){
+  menu_button.classList.toggle('menu_open');
+  menu.classList.toggle('show');
+
+}
 
 //is in viewport function 
 var isInViewport = function (elem) {
