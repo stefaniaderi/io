@@ -25,7 +25,7 @@
         <div class="submenu">
           {% for page in site.pages %}
             {% if page.categories contains {{item.category}}%}
-            <li><a href="#{{page.slug}}" data-cat="{{page.slug}}">{{page.title}}</a>  </li>      
+            <li><a href="{{site.url}}{{site.baseurl}}#{{page.slug}}" data-cat="{{page.slug}}">{{page.title}}</a>  </li>      
             {% endif %}
           {% endfor %}
         </div>
