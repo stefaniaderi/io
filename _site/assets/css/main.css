@@ -75,6 +75,7 @@ h2 {
   height: 100vh;
   background: white;
   width: min-content;
+  border-right: 1px solid black;
 }
 .header .title a {
   padding: 1rem;
@@ -132,6 +133,8 @@ h2 {
 
 .desc {
   grid-column: 1/3;
+  border-right: 1px solid black;
+  padding-right: 1rem;
 }
 .desc > * {
   position: sticky;
