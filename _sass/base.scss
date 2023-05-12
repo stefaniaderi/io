@@ -147,6 +147,7 @@ h2{
 .desc {
   grid-column: 1 / 3;
   border-right: $border;
+  padding:0rem 1rem 0rem 0rem;
   > * {
   position: sticky;
   top:calc(#{$padding}*3);
