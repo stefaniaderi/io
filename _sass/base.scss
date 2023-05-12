@@ -84,7 +84,7 @@ h2{
   height: 100vh;
   background: white;
   width: min-content;
-  box-shadow: $shadow;
+  border-right: $border;
   .title a{
     padding: $padding;
     mix-blend-mode: normal;
