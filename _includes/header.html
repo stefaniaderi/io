@@ -33,8 +33,11 @@
     </ul>
     <div class="menu"> 
         <ul class="menu_dropdown">
+    <ul class="bigmenu">
       {% for item in site.data.menu%}
-      <li> {{item.title}} </li>
+      <li data-tags="{{item.category}}"> 
+        {{item.title}}
+      </li>
         <div class="submenu">
           {% for page in site.pages %}
             {% if page.categories contains {{item.category}}%}

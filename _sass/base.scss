@@ -5,6 +5,11 @@
   font-weight: 400;
   font-style: normal;
 }
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 
 $backgroundColor: #ffffff;
 $bodyColor: black;
@@ -16,6 +21,9 @@ $border: 1px solid $bodyColor;
 $highlight: blue;
 $transition: 0.5s;
 $headerHeight: $padding;
+
+
+
 html{
   scroll-behavior:smooth;
 }
@@ -31,7 +39,7 @@ body {
   }
 }
 main{ 
-
+  animation: fadeIn 1.3s;
 }
 img {
   max-width:800px;
@@ -120,9 +128,10 @@ h2{
 
 .content{
   grid-column: 2 / 9;
-  display: none;
   opacity: 0;
-  transition: height 0ms 0ms, opacity 600ms 0ms;
+  height: 0;
+  transition: opacity $transition ease-in;
+
   > .grid{
     $columns: 6;
       grid-template-columns: repeat($columns, 1fr);
@@ -232,10 +241,10 @@ h2{
   }
 }
 .show {
-  display: block!important;
   height: auto;
   opacity: 1!important;
-  transition: height 0ms 0ms, opacity 600ms 0ms;
+  transition: opacity $transition ease-out;
+  //animation: fadeIn 1s;
 }
 
 @media (max-width: 768px){
@@ -318,8 +327,14 @@ h2{
       display: list-item;  
       margin-right: 2rem;
     }
-  }
 
+  }
+  .showmenu{
+      display: block !important;
+      > *{
+        display: block !important ;
+      }
+  }
   .menu_open:before {
     background-image: url(../icons/close.svg);
     background-position: center;

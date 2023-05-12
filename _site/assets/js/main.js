@@ -12,7 +12,7 @@ menu_button.addEventListener("click", dropdownMenu);
 
 function dropdownMenu(){
   menu_button.classList.toggle('menu_open');
-  menu.classList.toggle('show');
+  menu.classList.toggle('showmenu');
 
 }
 
@@ -92,12 +92,15 @@ for (var i = 0; i < btns.length; i++) {
 function filterSelection(evt) {
   if (evt.target !== this) return;
   console.log('click');
+  for (var i = 0; i < posts.length; i++) {
+          posts[i].classList.add('show');
+        } 
     //se non clicco su un tag già attivo visualizza tutti i post -> annulla filtro
   if (this.classList.contains('bigActive')) {
       this.classList.remove("bigActive");
       console.log('error');
-        for (var i = 0; i < post.length; i++) {
-          post[i].classList.add('show');
+        for (var i = 0; i < posts.length; i++) {
+          posts[i].classList.add('show');
         } 
     } else {
 
@@ -110,17 +113,16 @@ function filterSelection(evt) {
       this.classList.add("bigActive");
     
       //rimuovi dai post tutti gli attivi per poi aggiungerli dopo
-      post = document.querySelectorAll(".content");
-      for (var i = 0; i < post.length; i++) {
-        post[i].classList.remove('show');
+      for (var i = 0; i < posts.length; i++) {
+        posts[i].classList.remove('show');
       }
       //aggiungi show solo se il post contiene tutti gli elementi in tagslist
-      for (var i = 0; i < post.length; i++) {
+      for (var i = 0; i < posts.length; i++) {
         //console.log(post[i].classList);
 
         //console.log(tagsList[j]);
-        if (post[i].classList.contains(tags)){
-          post[i].classList.add('show');
+        if (posts[i].classList.contains(tags)){
+          posts[i].classList.add('show');
         }
         
       }
@@ -136,8 +138,8 @@ for (var i = 0; i < subtns.length; i++) {
   }
 
 function filterDelete() {
-  for (var i = 0; i < post.length; i++) {
-    post[i].classList.add('show');
+  for (var i = 0; i < posts.length; i++) {
+    posts[i].classList.add('show');
   } 
   for (var i = 0; i < btns.length; i++) {
     btns[i].classList.remove("bigActive");
