@@ -119,6 +119,7 @@ h2 {
 .content {
   grid-column: 2/9;
   opacity: 0;
+  display: none;
   height: 0;
   transition: opacity 0.5s ease-in;
 }
@@ -231,6 +232,7 @@ h2 {
 .show {
   height: auto;
   opacity: 1 !important;
+  display: block;
   transition: opacity 0.5s ease-out;
 }
 
