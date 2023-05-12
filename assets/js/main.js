@@ -81,5 +81,109 @@ for (var i = 0; i < document.links.length; i++) {
     }
 }
 
+//MENU VOICES ACT LIKE FILTERS
+let tagsList = [];
+let btns = document.querySelectorAll('.bigmenu li');;
+for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", filterSelection);
+  }
 
+//SINGLE FILTER
+function filterSelection(evt) {
+  if (evt.target !== this) return;
+  console.log('click');
+    //se non clicco su un tag già attivo visualizza tutti i post -> annulla filtro
+  if (this.classList.contains('bigActive')) {
+      this.classList.remove("bigActive");
+      console.log('error');
+        for (var i = 0; i < post.length; i++) {
+          post[i].classList.add('show');
+        } 
+    } else {
+
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].classList.remove("bigActive");
+      }
+      //prendi i tag del filtro selezionato
+      let tags = this.dataset.tags;
+      //toggle per renderlo attivo o no
+      this.classList.add("bigActive");
+    
+      //rimuovi dai post tutti gli attivi per poi aggiungerli dopo
+      post = document.querySelectorAll(".content");
+      for (var i = 0; i < post.length; i++) {
+        post[i].classList.remove('show');
+      }
+      //aggiungi show solo se il post contiene tutti gli elementi in tagslist
+      for (var i = 0; i < post.length; i++) {
+        //console.log(post[i].classList);
+
+        //console.log(tagsList[j]);
+        if (post[i].classList.contains(tags)){
+          post[i].classList.add('show');
+        }
+        
+      }
+
+    }
+
+}
+
+//if click submenu delete filters
+let subtns = document.querySelectorAll('.submenu li');;
+for (var i = 0; i < subtns.length; i++) {
+    subtns[i].addEventListener("click", filterDelete);
+  }
+
+function filterDelete() {
+  for (var i = 0; i < post.length; i++) {
+    post[i].classList.add('show');
+  } 
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].classList.remove("bigActive");
+  }
+}
+
+
+/*MULTIFILTER
+function filterSelection(evt) {
+  if (evt.target !== this) return;
+  console.log('click');
+  //prendi i tag del filtro selezionato
+  let tags = this.dataset.tags;
+  //toggle per renderlo attivo o no
+  this.classList.toggle("active");
+  //aggiungi quello appena cliccato alla lista degli attivi
+  tagsList.push(tags);
+  //console.log(tagsList);
+
+  //se è già attivo toglilo dalla lista
+    if (!this.classList.contains('active')){
+      tagsList = tagsList.filter(e => e !== tags);
+      //console.log(tagsList);
+    }
+    //rimuovi dai post tutti gli attivi per poi aggiungerli dopo
+    post = document.querySelectorAll(".content");
+    for (var i = 0; i < post.length; i++) {
+      post[i].classList.remove('show');
+    }
+    //aggiungi show solo se il post contiene tutti gli elementi in tagslist
+    for (var i = 0; i < post.length; i++) {
+      //console.log(post[i].classList);
+    for (var j = 0; j < tagsList.length; j++) {
+      //console.log(tagsList[j]);
+      if (post[i].classList.contains(tagsList[j])){
+        post[i].classList.add('show');
+      }
+    }
+  }
+  //se non ci sono tags visualizza tutto
+    if (tagsList.length === 0) {
+        for (var i = 0; i < post.length; i++) {
+          post[i].classList.add('show');
+        }
+    }
+    
+
+}*/
 

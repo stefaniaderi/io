@@ -1,8 +1,10 @@
 - title: Projects
-  category: 'projects'
+  category: 'project'
   link: /projects/projects.html
 - title: Writings
-  category: 'writings'
+  category: 'writing'
   link: /writings/writings.html
 - title: About
   link: /about/about.html
+  category: 'about'
+  slug: about

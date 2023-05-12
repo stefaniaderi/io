@@ -20,7 +20,7 @@ body ::selection {
 }
 
 img {
-  max-width: 900px;
+  max-width: 800px;
 }
 
 li {
@@ -82,20 +82,34 @@ h2 {
   font-weight: bold;
 }
 
+.bigmenu .bigActive {
+  width: fit-content;
+  color: white;
+  padding: 0.1rem 0.4rem;
+  background: black;
+  border-radius: 1rem;
+}
 .bigmenu li {
-  padding-top: 1rem;
+  margin-top: 1rem;
+}
+.bigmenu li:hover {
+  cursor: pointer;
 }
 
 .submenu {
   padding-left: 1rem;
 }
 .submenu li {
-  padding-top: 0px;
+  margin-top: 0px;
   padding-bottom: calc(1rem / 2);
 }
 
 .content {
-  grid-column: 2/8;
+  grid-column: 2/9;
+  display: none;
+  opacity: 0;
+  transition: height 0ms 0ms, opacity 600ms 0ms;
+  overflow: hidden;
 }
 .content > .grid {
   grid-template-columns: repeat(6, 1fr);
@@ -109,7 +123,7 @@ h2 {
 }
 .desc > * {
   position: sticky;
-  top: 1rem;
+  top: calc(1rem*3);
   display: block;
   position: -webkit-sticky;
 }

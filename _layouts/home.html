@@ -1,8 +1,8 @@
 {% include header.html %}
 
 {% for page in site.pages %}
-  {% if page.categories contains 'projects' or  page.categories contains 'writings' %}    
-    <div class="content " id="{{page.slug}}">
+  {% if page.categories contains 'project' or  page.categories contains 'writing' or  page.type contains 'about' %}    
+    <div class="content show {{page.layout}} " id="{{page.slug}}">
       <div class="grid">
           <div class="desc">
             <a name="{{page.slug}}" href="{{site.baseurl}}{{page.url}}">
