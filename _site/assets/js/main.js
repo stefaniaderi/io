@@ -6,7 +6,7 @@ const menu_button = document.querySelector('.menu');
 const menu = document.querySelector('.menu_dropdown');
 let submenu = document.querySelectorAll('.submenu li a');
 let posts = document.querySelectorAll('.content');
-let toggleMoreBtn = document.querySelectorAll('#text-toggle');
+let toggleMoreBtn = document.querySelectorAll('.text-toggle');
 
 
 //SHOW MORE TEXT
@@ -16,6 +16,7 @@ for (var i = 0; i < toggleMoreBtn.length; i++) {
 
 function toggleMore(){
   for (var i = 0; i < toggleMoreBtn.length; i++) {
+    this.classList.toggle('text-toggle_open');
    this.nextElementSibling.classList.toggle('show');
    this.nextElementSibling.classList.toggle('hide');
   }

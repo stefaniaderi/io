@@ -6,16 +6,16 @@
       <div class="grid">
           <div class="desc">
             <div class="item">
-                <h2>{{page.title}}</h2>
+                <a name="{{page.slug}}" href="{{site.baseurl}}{{page.url}}"><h2>{{page.title}}</h2></a>
                 <div class="info">{{page.subtitle}}<br>
                 {{page.date}} <br>
                 {{page.tags}} </div>
                 
-                <div id="text-toggle"></div> 
+                <div class="text-toggle"></div> 
                 <p class="hide">{{page.description}}</p>
             </div>
         </div>
-        <!--<a name="{{page.slug}}" href="{{site.baseurl}}{{page.url}}">--><div class="photo">{{page.content}} </div><!--</a>-->
+        <div class="photo">{{page.content}} </div>
       </div>
     </div>
   {% endif %}

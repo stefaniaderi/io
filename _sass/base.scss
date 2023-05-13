@@ -190,7 +190,7 @@ h2{
   font-weight:500;
   color: grey;
 }
-#text-toggle{
+.text-toggle{
   &:before{
     display: block;
     content: "";
@@ -198,8 +198,26 @@ h2{
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 1rem;
-    height: 1rem;
+    width: 0.9rem;
+    height: 0.9rem;
+    position: relative;
+    left: 0;
+    top: 1rem;
+    padding-bottom: $padding;
+  }&:hover{
+    cursor: pointer;
+  }
+}
+.text-toggle_open{
+  &:before{
+    display: block;
+    content: "";
+    background-image: url(../icons/less.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 0.9rem;
+    height: 0.9rem;
     position: relative;
     left: 0;
     top: 1rem;
