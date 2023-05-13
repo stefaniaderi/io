@@ -5,17 +5,17 @@
     <div class="content show {{page.layout}} " id="{{page.slug}}">
       <div class="grid">
           <div class="desc">
-            <a name="{{page.slug}}" href="{{site.baseurl}}{{page.url}}">
-              <div class="item">
-                  <h2>{{page.title}}</h2>
-                  <div class="info">{{page.subtitle}}<br>
-                  {{page.date}} <br>
-                  {{page.tags}} </div>
-                  <p>{{page.description}}</p>
-                </div>
-              </a>
+            <div class="item">
+                <h2>{{page.title}}</h2>
+                <div class="info">{{page.subtitle}}<br>
+                {{page.date}} <br>
+                {{page.tags}} </div>
+                
+                <div id="text-toggle"></div> 
+                <p class="hide">{{page.description}}</p>
+            </div>
         </div>
-          <div class="photo">{{page.content}} </div>
+        <!--<a name="{{page.slug}}" href="{{site.baseurl}}{{page.url}}">--><div class="photo">{{page.content}} </div><!--</a>-->
       </div>
     </div>
   {% endif %}

@@ -6,6 +6,24 @@ const menu_button = document.querySelector('.menu');
 const menu = document.querySelector('.menu_dropdown');
 let submenu = document.querySelectorAll('.submenu li a');
 let posts = document.querySelectorAll('.content');
+let toggleMoreBtn = document.querySelectorAll('#text-toggle');
+
+
+//SHOW MORE TEXT
+for (var i = 0; i < toggleMoreBtn.length; i++) {
+    toggleMoreBtn[i].addEventListener("click", toggleMore);
+  }
+
+function toggleMore(){
+  for (var i = 0; i < toggleMoreBtn.length; i++) {
+   this.nextElementSibling.classList.toggle('show');
+   this.nextElementSibling.classList.toggle('hide');
+  }
+ 
+  console.log('i work');
+
+}
+
 
 //MENU RESPONSIVE
 menu_button.addEventListener("click", dropdownMenu);
