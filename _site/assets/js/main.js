@@ -85,9 +85,9 @@ window.onscroll = function() {
         let category = btns[y].getAttribute('data-tags');
         if (post.classList.contains(category)){
           console.log('working');
-          btns[y].classList.add("active");
+          btns[y].classList.add("bigActive");
         } else {
-          btns[y].classList.remove("active");
+          btns[y].classList.remove("bigActive");
         }
       }
 
@@ -124,8 +124,8 @@ function filterSelection(evt) {
           posts[i].classList.add('show');
         } 
     //se non clicco su un tag già attivo visualizza tutti i post -> annulla filtro
-  if (this.classList.contains('bigActive')) {
-      this.classList.remove("bigActive");
+  if (this.classList.contains('filtering')) {
+      this.classList.remove("filtering");
       console.log('error');
         for (var i = 0; i < posts.length; i++) {
           posts[i].classList.add('show');
@@ -133,12 +133,12 @@ function filterSelection(evt) {
     } else {
 
       for (var i = 0; i < btns.length; i++) {
-        btns[i].classList.remove("bigActive");
+        btns[i].classList.remove("filtering");
       }
       //prendi i tag del filtro selezionato
       let tags = this.dataset.tags;
       //toggle per renderlo attivo o no
-      this.classList.add("bigActive");
+      this.classList.add("filtering");
     
       //rimuovi dai post tutti gli attivi per poi aggiungerli dopo
       for (var i = 0; i < posts.length; i++) {
@@ -170,7 +170,7 @@ function filterDelete() {
     posts[i].classList.add('show');
   } 
   for (var i = 0; i < btns.length; i++) {
-    btns[i].classList.remove("bigActive");
+    btns[i].classList.remove("filtering");
   }
 }
 

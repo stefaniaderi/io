@@ -4,4 +4,4 @@ layout: about
 type: [about]
 slug: about
 ---
-Download Portfolio <a href="{{site.baseurl}}/portfolio/portfolio.html">qui</a>
+Portfolio available anytime, anywhere right at this <a href="{{site.baseurl}}/portfolio/portfolio.html">link</a>

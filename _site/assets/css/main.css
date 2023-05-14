@@ -101,28 +101,27 @@ h2 {
 .header {
   /*padding: calc(1rem * 3) $padding 0 calc(1rem * 1); */
   padding: 0px;
-  margin: -1rem;
+  margin: -1rem -1rem -2rem -1rem;
   position: fixed;
   height: 110vh;
-  background: lightgrey;
+  background: #9a9999;
   border-right: 0px solid lightgrey;
   font-weight: 500;
 }
 .header ul {
   padding-left: 0px;
-  color: grey;
+  color: lightgrey;
 }
 .header li > a {
-  color: grey;
+  color: lightgrey;
 }
 
 .title {
   padding: 1rem;
 }
 .title a {
-  padding: 1rem;
   mix-blend-mode: normal;
-  color: black;
+  color: white;
 }
 
 .active {
@@ -131,28 +130,31 @@ h2 {
 }
 
 .bigmenu .bigActive {
-  width: fit-content;
-  color: white;
-  padding: 0.1rem 0.4rem;
   background: black;
-  border-radius: 1rem;
+  color: white;
+  border-color: black;
+}
+.bigmenu .filtering {
+  background: blue;
+  color: white;
+  border-color: blue;
 }
 .bigmenu li {
   width: -webkit-fill-available;
   padding: calc(1rem / 4) 1rem calc(1rem / 4) calc(1rem *1.5);
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
   margin-top: 1rem;
 }
 .bigmenu li:hover {
   cursor: pointer;
 }
 
-.submenu {
-  padding-left: 1rem;
-}
 .submenu li {
   margin-top: 0px;
-  padding: calc(1rem / 4) calc(1rem *1.5);
+  padding: 0.1rem 1rem 0.1rem 2rem;
+}
+.submenu li:has(> a.active) {
+  background: lightgrey;
 }
 
 .content {
@@ -259,7 +261,7 @@ h2 {
   border: 0px solid lightgrey;
   outline: none;
   background-color: lightgoldenrodyellow;
-  color: grey;
+  color: #9a9999;
   cursor: pointer;
   padding: 1rem;
   border-radius: 6rem;
