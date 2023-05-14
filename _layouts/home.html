@@ -1,12 +1,13 @@
 {% include header.html %}
-
-{% for page in site.pages %}
+{%assign sortedPosts = site.pages | sort: 'sort'%}
+{% for page in sortedPosts %}
   {% if page.categories contains 'project' or  page.categories contains 'writing' or  page.type contains 'about' %}    
     <div class="content show {{page.layout}} " id="{{page.slug}}">
       <div class="grid">
           <div class="desc">
             <div class="item">
                 <a name="{{page.slug}}" href="{{site.baseurl}}{{page.url}}"><h2>{{page.title}}</h2></a>
+
                 <div class="info">{{page.subtitle}}<br>
                 {{page.date}} <br>
                 {{page.tags}} </div>

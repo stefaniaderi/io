@@ -5,6 +5,7 @@ subtitle:
 tags:
 slug: folle 
 date: 2022
+sort: 1
 description: 'Il saggio confronta il concetto di “folla” così come analizzato da Gustave Le Bon nel 1985 nel saggio Psicologia delle folle con quello degli studiosi Heimans e Timms nel saggio New Power, del 2018 dopo l’affermarsi delle ICT. Il testo evidenzia che i maggiori cambiamenti sono dovuti all’abbassamento della soglia di partecipazione a causa dei social network. Per verificare le ipotesi teoriche si analizzerà il caso di cronaca dell’attacco al Campidoglio statunitense del 6 Gennaio 2021. Le folle sono un fenomeno di cui si deve tener conto in un’epoca in cui queste sono capaci di segnare profondamente il bilancio politico di uno Stato (Gentile 2017) poiché la loro crescente partecipazione potrebbe segnare un cambiamento dell’equilibrio democratico a cui siamo abituati.'
 categories: [writing]
 ---
