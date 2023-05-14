@@ -7,7 +7,7 @@ const menu = document.querySelector('.menu_dropdown');
 let submenu = document.querySelectorAll('.submenu li a');
 let posts = document.querySelectorAll('.content');
 let toggleMoreBtn = document.querySelectorAll('.text-toggle');
-
+let btns = document.querySelectorAll('.bigmenu li');
 
 //SHOW MORE TEXT
 for (var i = 0; i < toggleMoreBtn.length; i++) {
@@ -69,15 +69,25 @@ window.onscroll = function() {
   //loops for all posts
   while (j < posts.length) {
     let post = posts[j];
-    let postCategory = post.id;
+    let postId = post.id;
     if (isInViewport(post)) {
-      //loops for all menu voices
+      //loops for all submenu voices
       for (let y = 0; y < submenu.length; y++) {
-        let category = submenu[y].getAttribute('data-cat');
-        if (postCategory == category){
+        let id = submenu[y].getAttribute('data-id');
+        if (postId == id){
           submenu[y].classList.add("active");
         } else {
           submenu[y].classList.remove("active");
+        }
+      }
+      //highlight menu voice (category: project/writings)
+      for (let y = 0; y < btns.length; y++) {
+        let category = btns[y].getAttribute('data-tags');
+        if (post.classList.contains(category)){
+          console.log('working');
+          btns[y].classList.add("active");
+        } else {
+          btns[y].classList.remove("active");
         }
       }
 
@@ -102,7 +112,6 @@ for (var i = 0; i < document.links.length; i++) {
 
 //MENU VOICES ACT LIKE FILTERS
 let tagsList = [];
-let btns = document.querySelectorAll('.bigmenu li');;
 for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", filterSelection);
   }
