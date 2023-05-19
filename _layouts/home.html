@@ -11,9 +11,14 @@
                 <div class="info">{{page.subtitle}}<br>
                 {{page.date}} <br>
                 {{page.tags}} </div>
-                
+                {% if page.link %}
+                <a class="link" href="{{page.link}}"> 🔗 </a>
+                {% endif%}
+                {% if page.description %}
                 <div class="text-toggle"></div> 
                 <p class="hide">{{page.description}}</p>
+                {% endif%}
+                
             </div>
         </div>
         <div class="photo">{{page.content}} </div>

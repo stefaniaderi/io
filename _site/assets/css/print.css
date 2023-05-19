@@ -113,6 +113,7 @@
     font-variation-settings: "wght" 510,"opsz" 30;
     line-height: 100%;
     font-family: var(--font-family-titles);
+    display: inline-flex;
   }
   h3{
     string-set: h3 content(text);
@@ -134,19 +135,24 @@
   }
   #copertina{
     page: copertina;
-    grid-column: 6 / 8;
+    grid-column: 9 / 12;
   }
   #progetto{
     page: progetto;
   }
   .dati{
-    grid-column: 1 / 6;
+    grid-column: 1 / 8;
   }
   .desc{
     font-family: Suisse Neue;
-    grid-column: 1 / 6;
+    grid-column: 1 / 8;
     orphans: 2;
     widows: 2;
+    padding: 0px;
+  }
+  .link{
+    display: inline-flex;
+    padding:0.15rem 0rem 0rem 1rem;
   }
   .quote{
     font-style: italic;

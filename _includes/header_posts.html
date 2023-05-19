@@ -23,9 +23,10 @@
         {{item.title}}
       </li>
         <div class="submenu">
-          {% for page in site.pages %}
+          {%assign sortedPosts = site.pages | sort: 'sort'%}
+          {% for page in sortedPosts %}
             {% if page.categories contains {{item.category}}%}
-            <li><a href="{{site.url}}{{site.baseurl}}#{{page.slug}}" data-cat="{{page.slug}}">{{page.title}}</a>  </li>      
+            <li><a href="{{site.url}}{{site.baseurl}}#{{page.slug}}" data-id="{{page.slug}}">{{page.title}}</a>  </li>      
             {% endif %}
           {% endfor %}
         </div>
@@ -41,7 +42,7 @@
         <div class="submenu">
           {% for page in site.pages %}
             {% if page.categories contains {{item.category}}%}
-            <li><a href="{{site.url}}{{site.baseurl}}#{{page.slug}}" data-cat="{{page.slug}}">{{page.title}}</a>  </li>      
+            <li><a href="{{site.url}}{{site.baseurl}}#{{page.slug}}" data-id="{{page.slug}}">{{page.title}}</a>  </li>      
             {% endif %}
           {% endfor %}
         </div>

@@ -11,11 +11,15 @@
   {% if page.categories contains 'project' %}    
 <div class="grid" id="progetto">
   <div class="dati">
-    <h2>{{page.title}}</h2>
+    <h2>{{page.title}}</h2> 
+    {% if page.link %}
+        <a class="link" href="{{page.link}}"> 🔗 </a>
+      {% endif%}
     <h3>{{page.subtitle}}</h3>
     <div class="info">
       {{page.date}} <br>
       {{page.tags}}
+      
     </div>
   </div>
   <div class="desc">{{page.description}}</div>
