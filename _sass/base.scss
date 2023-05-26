@@ -141,6 +141,19 @@ h2{
 }
 
 .bigmenu{
+  li::after{
+    display: block;
+    content: "";
+    background-image: url(../icons/filter.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 0.9rem;
+    height: 0.9rem;
+    position: absolute;
+    margin-top: -1rem;
+    right: 0.25rem;
+  }
   .bigActive {
     background: black;
     color: white;
@@ -150,7 +163,6 @@ h2{
     background: blue;
     color: white;
     border-color: blue;
-
   }
   li{
     width: -webkit-fill-available;
@@ -161,12 +173,16 @@ h2{
       cursor: pointer;
     }
   }
+  
 }
 
 .submenu{
   li {
     margin-top: 0px;
-    padding: 0.1rem 1rem 0.1rem 2rem; ;
+    padding: 0.1rem 1rem 0.1rem 2rem; 
+    &::after{
+      display: none;
+    }
   }
   li:has(> a.active){
     background: $lightGrey;

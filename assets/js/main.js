@@ -16,11 +16,12 @@ for (var i = 0; i < toggleMoreBtn.length; i++) {
 
 function toggleMore(){
   for (var i = 0; i < toggleMoreBtn.length; i++) {
-    this.classList.toggle('text-toggle_open');
+  this.classList.toggle('text-toggle_open');
    this.nextElementSibling.classList.toggle('show');
    this.nextElementSibling.classList.toggle('hide');
+   console.log(this.nextElementSibling);
   }
- 
+  
   console.log('i work');
 
 }

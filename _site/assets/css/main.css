@@ -129,6 +129,19 @@ h2 {
   font-weight: bold;
 }
 
+.bigmenu li::after {
+  display: block;
+  content: "";
+  background-image: url(../icons/filter.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 0.9rem;
+  height: 0.9rem;
+  position: absolute;
+  margin-top: -1rem;
+  right: 0.25rem;
+}
 .bigmenu .bigActive {
   background: black;
   color: white;
@@ -152,6 +165,9 @@ h2 {
 .submenu li {
   margin-top: 0px;
   padding: 0.1rem 1rem 0.1rem 2rem;
+}
+.submenu li::after {
+  display: none;
 }
 .submenu li:has(> a.active) {
   background: lightgrey;
