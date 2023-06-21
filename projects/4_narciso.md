@@ -12,5 +12,4 @@ description: ''
 ![]({{site.baseurl}}/projects/narciso_1.jpg)
 ![]({{site.baseurl}}/projects/narciso_2.jpg)
 ![]({{site.baseurl}}/projects/narciso_3.jpg)
-
 ![]({{site.baseurl}}/projects/narciso_5.jpg)

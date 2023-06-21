@@ -64,6 +64,7 @@ li {
 }
 
 a {
+  font-family: "Suisse";
   text-decoration: none;
   text-underline-offset: 0.3rem;
   color: blue;
@@ -247,6 +248,9 @@ h2 {
 
 .photo {
   grid-column: 4/10;
+}
+.photo a {
+  color: blue !important;
 }
 
 /*.header{
