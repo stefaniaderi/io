@@ -6,7 +6,8 @@
       <div class="grid">
           <div class="desc">
             <div class="item">
-                <a name="{{page.slug}}" href="{{site.baseurl}}{{page.url}}"><h2>{{page.title}}</h2></a>
+              <!--href="{{site.baseurl}}{{page.url}}"-->
+                <a name="{{page.slug}}"><h2>{{page.title}}</h2></a>
 
                 <div class="info">{{page.subtitle}}<br>
                 {{page.date}} <br>
@@ -15,7 +16,7 @@
                 <a class="link" href="{{page.link}}"> 🔗 </a>
                 {% endif%}
                 <div class="text-toggle"></div> 
-                <p class="hide">{{page.description}}</p>
+                <div class="info hide" style="padding-top: 1rem">{{page.description}}</div>
                 
             </div>
         </div>

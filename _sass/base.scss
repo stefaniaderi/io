@@ -222,6 +222,7 @@ h2{
   font-weight:500;
   color: grey;
 }
+
 .text-toggle{
   &:before{
     display: block;
@@ -258,6 +259,7 @@ h2{
     cursor: pointer;
   }
 }
+
 .link{
   position: absolute;
   padding: 1.4rem 0rem 0rem 2rem;
