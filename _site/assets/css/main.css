@@ -138,6 +138,10 @@ h2 {
   font-weight: 400;
 }
 
+h3 {
+  font-weight: 500;
+}
+
 .grid {
   display: grid;
   grid-gap: 1rem;
