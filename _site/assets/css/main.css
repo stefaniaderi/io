@@ -146,7 +146,7 @@ h2 {
 .grid p {
   grid-column: 1/12;
   padding-bottom: 1rem;
-  font-family: "Authentic Condensed";
+  font-family: "Authentic";
   line-height: 148%;
 }
 .grid > .column {
