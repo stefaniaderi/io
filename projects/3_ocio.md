@@ -3,7 +3,7 @@ layout: project
 title: Ocio Website
 subtitle: 
 slug: ocio
-tags: web design, development
+tags: [web design, development]
 categories: [project]
 date: 2022—2023
 link: http://ocio-venezia.it

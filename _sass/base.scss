@@ -30,25 +30,79 @@
   font-weight: 400;
   font-style: italic;
 }
+@font-face {
+  font-family: "Apple Garamond";
+  src: url("../fonts/AppleGaramond-Light.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Authentic";
+  src: url("../fonts/AUTHENTICSans-60.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Authentic";
+  src: url("../fonts/AUTHENTICSans-90.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Authentic";
+  src: url("../fonts/AUTHENTICSans-130.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Authentic";
+  src: url("../fonts/AUTHENTICSans-150.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Authentic Condensed";
+  src: url("../fonts/AUTHENTICSans-Condensed-60.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Authentic Condensed";
+  src: url("../fonts/AUTHENTICSans-Condensed-90.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Authentic Condensed";
+  src: url("../fonts/AUTHENTICSans-Condensed-130.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Authentic Condensed";
+  src: url("../fonts/AUTHENTICSans-Condensed-150.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
 
 
-$backgroundColor: #ffffff;
+$backgroundColor: white;
 $bodyColor: black;
 $lightGrey:lightgrey;
 $midGrey: #9a9999;
-$bodyFont: 'Suisse';
-$serifFont: "Suisse Neue";
+$bodyFont: 'Authentic';
+$serifFont: "Authentic Condensed";
 $fontSize: 14px;
 $padding: 1rem;
 $gutter: $padding;
 $border: 0px solid $lightGrey;
 $highlight: blue;
 $transition: 0.5s;
-$headerHeight: $padding;
+$headerHeight: 10rem;
 $shadow: 0px 0px 22px 13px $lightGrey;
 
 
@@ -93,6 +147,7 @@ h1{
 h2{
   font-size: 1.5rem;
   margin:0px;
+  font-weight: 400;
 }
 .grid {
   $columns: 12;
@@ -109,14 +164,19 @@ h2{
   margin-bottom: 1rem;
   grid-column: span $columns;
   } 
+  &.contents{
+    /*margin-top: ($headerHeight * 2 );*/
+  }
 }
 .header{
   /*padding: calc(#{$padding} * 3) $padding 0 calc(#{$padding} * 1); */
   padding: 0px;
   margin: -1rem -1rem -2rem -1rem;
   position: fixed;
+  width: 220px;
+  /*grid-column: 1 / 12;*/
   height: 110vh;
-  background: $midGrey;
+  /*background: $midGrey;*/
   border-right: $border;
   font-weight: 500;
 
@@ -130,9 +190,14 @@ h2{
 }
 .title {
   padding: $padding;
+  color: $midGrey;
+  font-weight: 400;
   a{
     mix-blend-mode: normal;
     color: white;
+    background: $highlight;
+    font-weight: 600;
+    padding: 0.1rem 0.25rem 0rem 0.25rem;
   }
 }
 
@@ -170,6 +235,8 @@ h2{
     padding: calc(#{$padding} / 4) 1rem calc(#{$padding} / 4) calc(#{$padding} *1.5);
     border-bottom: 1px solid white;
     margin-top: 1rem;
+    background: $midGrey;
+    color: black;
     &:hover{
       cursor: pointer;
     }
@@ -178,15 +245,19 @@ h2{
 }
 
 .submenu{
+   display: unset;
   li {
     margin-top: 0px;
-    padding: 0.1rem 1rem 0.1rem 2rem; 
+    padding: 0.1rem 1rem 0.1rem 2rem;
+    background: $lightGrey; 
+    a {color: white;}
+
     &::after{
       display: none;
     }
   }
   li:has(> a.active){
-    background: $lightGrey;
+    background: white;
   }
 }
 
@@ -222,7 +293,19 @@ h2{
   font-weight:500;
   color: grey;
 }
-
+.date {
+  font-weight: 500;
+  color:white;
+}
+.tag {
+  margin-top: 0rem;
+  li{
+    margin-top: 0.25rem;
+    display: inline-block;
+    padding: 0rem 0.1rem;
+    border: 1px solid ;
+  }
+}
 .text-toggle{
   &:before{
     display: block;

@@ -28,6 +28,60 @@
   font-weight: 400;
   font-style: italic;
 }
+@font-face {
+  font-family: "Apple Garamond";
+  src: url("../fonts/AppleGaramond-Light.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Authentic";
+  src: url("../fonts/AUTHENTICSans-60.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Authentic";
+  src: url("../fonts/AUTHENTICSans-90.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Authentic";
+  src: url("../fonts/AUTHENTICSans-130.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Authentic";
+  src: url("../fonts/AUTHENTICSans-150.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Authentic Condensed";
+  src: url("../fonts/AUTHENTICSans-Condensed-60.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Authentic Condensed";
+  src: url("../fonts/AUTHENTICSans-Condensed-90.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Authentic Condensed";
+  src: url("../fonts/AUTHENTICSans-Condensed-130.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Authentic Condensed";
+  src: url("../fonts/AUTHENTICSans-Condensed-150.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -42,9 +96,9 @@ html {
 
 body {
   font-size: 14px;
-  background: #ffffff;
+  background: white;
   color: black;
-  font-family: "Suisse";
+  font-family: "Authentic";
 }
 body ::selection {
   background: blue;
@@ -64,7 +118,7 @@ li {
 }
 
 a {
-  font-family: "Suisse";
+  font-family: "Authentic";
   text-decoration: none;
   text-underline-offset: 0.3rem;
   color: blue;
@@ -81,6 +135,7 @@ h1 {
 h2 {
   font-size: 1.5rem;
   margin: 0px;
+  font-weight: 400;
 }
 
 .grid {
@@ -91,12 +146,15 @@ h2 {
 .grid p {
   grid-column: 1/12;
   padding-bottom: 1rem;
-  font-family: "Suisse Neue";
+  font-family: "Authentic Condensed";
   line-height: 148%;
 }
 .grid > .column {
   margin-bottom: 1rem;
   grid-column: span 12;
+}
+.grid.contents {
+  /*margin-top: ($headerHeight * 2 );*/
 }
 
 .header {
@@ -104,8 +162,10 @@ h2 {
   padding: 0px;
   margin: -1rem -1rem -2rem -1rem;
   position: fixed;
+  width: 220px;
+  /*grid-column: 1 / 12;*/
   height: 110vh;
-  background: #9a9999;
+  /*background: $midGrey;*/
   border-right: 0px solid lightgrey;
   font-weight: 500;
 }
@@ -119,10 +179,15 @@ h2 {
 
 .title {
   padding: 1rem;
+  color: #9a9999;
+  font-weight: 400;
 }
 .title a {
   mix-blend-mode: normal;
   color: white;
+  background: blue;
+  font-weight: 600;
+  padding: 0.1rem 0.25rem 0rem 0.25rem;
 }
 
 .active {
@@ -158,20 +223,29 @@ h2 {
   padding: calc(1rem / 4) 1rem calc(1rem / 4) calc(1rem *1.5);
   border-bottom: 1px solid white;
   margin-top: 1rem;
+  background: #9a9999;
+  color: black;
 }
 .bigmenu li:hover {
   cursor: pointer;
 }
 
+.submenu {
+  display: unset;
+}
 .submenu li {
   margin-top: 0px;
   padding: 0.1rem 1rem 0.1rem 2rem;
+  background: lightgrey;
+}
+.submenu li a {
+  color: white;
 }
 .submenu li::after {
   display: none;
 }
 .submenu li:has(> a.active) {
-  background: lightgrey;
+  background: white;
 }
 
 .content {
@@ -203,6 +277,21 @@ h2 {
 .info {
   font-weight: 500;
   color: grey;
+}
+
+.date {
+  font-weight: 500;
+  color: white;
+}
+
+.tag {
+  margin-top: 0rem;
+}
+.tag li {
+  margin-top: 0.25rem;
+  display: inline-block;
+  padding: 0rem 0.1rem;
+  border: 1px solid;
 }
 
 .text-toggle:before {
@@ -304,7 +393,7 @@ h2 {
 .item h3 {
   position: sticky;
   color: white;
-  top: 1rem;
+  top: 10rem;
   mix-blend-mode: difference;
 }
 

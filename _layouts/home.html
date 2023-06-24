@@ -9,9 +9,15 @@
               <!--href="{{site.baseurl}}{{page.url}}"-->
                 <a name="{{page.slug}}"><h2>{{page.title}}</h2></a>
 
-                <div class="info">{{page.subtitle}}<br>
-                {{page.date}} <br>
-                {{page.tags}} </div>
+                <div class="info">{{page.subtitle}}
+                <div class="date">{{page.date}} </div>
+                <div class="tag">
+                {% assign tags =  page.tags | join: ','  | split: ',' | uniq %}
+                  {% for tag in tags %}
+                    <li >{{ tag }}</li>
+                  {% endfor %}
+                </div>
+                </div>
                 {% if page.link %}
                 <a class="link" href="{{page.link}}"> 🔗 </a>
                 {% endif%}

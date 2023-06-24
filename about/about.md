@@ -5,4 +5,6 @@ type: [about]
 slug: about
 sort: 100000000
 ---
-Updated portfolio available anytime at this <a href="{{site.baseurl}}/portfolio/portfolio.html">link</a>
+Updated portfolio available anytime at this <a href="{{site.baseurl}}/portfolio/portfolio.html">link</a> 
+
+stefaniaderi1@gmail.com

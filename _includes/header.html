@@ -15,7 +15,18 @@
 <div class="grid">
   <div class="header">
     <div class="title">
-     <a href="{{ site.baseurl }}">{{ site.title }} </a>
+     <a href="{{ site.baseurl }}">{{ site.title }}</a> 
+     {% assign uniqueTags = "" | split: "|" %}
+     {% for page in site.pages %}
+        {% for tag in page.tags %}
+          <!--{{tag}}-->
+          {% unless uniqueTags contains tag %}
+            {% assign uniqueTags = uniqueTags | push: tag %}
+            {{tag}}{% unless forloop.last %},{% endunless %}
+          {% endunless %}
+        {% endfor %}
+      {% endfor %}
+      <!--{{uniqueTags}}-->
     </div>
     <ul class="bigmenu">
       {% for item in site.data.menu%}
@@ -52,4 +63,4 @@
   </div>
 </div>
 
-<main class="grid">
+<main class="grid contents">
