@@ -7,13 +7,13 @@
 @font-face {
   font-family: "Suisse";
   src: url("../fonts/SuisseIntl-Medium.otf") format("opentype");
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
 }
-  :root {
-    --fontSerif: 'Suisse';
-    --lightGrey:lightgrey;
+:root {
+    --lightGrey: lightgrey;
     --midGrey: #9a9999;
+    --bodyFont: 'Suisse';
     }
 @media print{
   :root {
@@ -22,10 +22,9 @@
     --margin-bottom: 20mm;
     --margin-left: 10mm; 
     --margin-right: 10mm;
-    --fontSerif: 'Suisse';
-    --lightGrey:lightgrey;
-    --midGrey: #9a9999;
+
     }
+
   *{
     line-height: 140%;
     font-size:13pt;
@@ -127,6 +126,8 @@
     line-height: 100%;
     font-family: var(--font-family-titles);
     display: inline-flex;
+    color: black;
+    font-size: 3rem;
   }
   h3{
     string-set: h3 content(text);
@@ -153,21 +154,24 @@
   #progetto{
     page: progetto;
   }
+  .info{
+    column-count: 1;
+    color: var(--midGrey);
+  }
+  .info li{
+    color: var(--midGrey);
+  }
   .dati{
-    grid-column: 3 / 13;
+    grid-column: 1 / 13;
+    column-count: 1;
+    color: var(--midGrey);
   }
   .desc{
-    font-family:  var(--fontSerif);
-    grid-column: 3 / 13;
+    font-family: var(--bodyFont);
+    grid-column: 1 / 10;
     orphans: 2;
     widows: 2;
     padding: 0px;
-  }
-  .date{
-    color: var(--lightGrey);
-  }
-  .tag li{
-    color: var(--midGrey);
   }
   .link{
     display: inline-flex;
@@ -177,7 +181,9 @@
     font-style: italic;
     /*font-size:1.2rem;*/
   }
-
+  .tag{
+    color: var(--midGrey);
+  }
   .ftn-call{
     position: relative;
     counter-increment: ftn-call;
