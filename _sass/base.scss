@@ -109,6 +109,7 @@ $shadow: 0px 0px 22px 13px $lightGrey;
 
 html{
   scroll-behavior:smooth;
+  font-size: $fontSize;
 }
 
 body {
@@ -116,6 +117,7 @@ body {
   background: $backgroundColor;
   color: $bodyColor;
   font-family: $bodyFont;
+  font-size: $fontSize;
   & ::selection{
     background: $highlight;
     color: white;
@@ -125,7 +127,7 @@ main{
   animation: fadeIn 1.3s;
 }
 img {
-  max-width:800px;
+  max-width:67vw;
 }
 
 li {
@@ -303,7 +305,7 @@ h3{
 
 
 .content{
-  grid-column: 4 / 11;
+  grid-column: 4 / 13;
   opacity: 0;
   display: none;
   height: 0;
@@ -319,7 +321,7 @@ h3{
 }
 
 .desc {
-  grid-column: 1 / 10;
+  grid-column: 1 / 13;
   border-right: $border;
   padding:0rem 1rem 0rem 1rem;
   > * {
@@ -389,7 +391,7 @@ h3{
   padding: 1.4rem 0rem 0rem 2rem;
 }
 .photo{
-  grid-column: 1 / 10;
+  grid-column: 1 / 13;
   a{
     color: $highlight !important;
   }
@@ -418,7 +420,7 @@ h3{
 }*/
 
 #scroll_top {
-  mix-blend-mode: plus-lighter;
+  //mix-blend-mode: plus-lighter;
   height: 1rem;
   width: 1rem;
   display: none;
@@ -428,7 +430,7 @@ h3{
   z-index: 104;
   border: $border;
   outline: none;
-  background-color:lightgoldenrodyellow;
+  background-color:blue;
   color: $midGrey;
   cursor: pointer;
   padding: $padding;
@@ -447,14 +449,16 @@ h3{
 
 .item{
   /*grid-column: 1 / 9;*/
+  padding:1rem;
   z-index: 1000;
-  background: blue;
-  box-shadow: 0px 0px 11px 11px blue ;
+  background: $midGrey;
+  /*box-shadow: 0px 0px 11px 11px blue ;*/
+  top: 0;
   h3{
   position: sticky;
   padding-top: $padding;
   color: white;
-  top: $headerHeight;
+  
   mix-blend-mode: difference;
   }
 }

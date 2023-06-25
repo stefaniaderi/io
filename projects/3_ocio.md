@@ -13,7 +13,7 @@ descIta: "Ocio è un'associazione di Venezia che fa attivismo sul tema della res
 sort:
 
 ---
-![]({{site.baseurl}}/projects/1.jpg)
-![]({{site.baseurl}}/projects/2.jpg)
-![]({{site.baseurl}}/projects/3.jpg)
-![]({{site.baseurl}}/projects/4.jpg)
+![]({{site.baseurl}}/projects/ocio.jpg)
+<video width="100%" preload="auto" muted controls loop>
+    <source src="{{site.baseurl}}/projects/ocio.mov" type="video/mp4"/>
+</video>
