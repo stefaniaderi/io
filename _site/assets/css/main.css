@@ -83,6 +83,24 @@
   font-weight: 700;
   font-style: normal;
 }
+@font-face {
+  font-family: "Gap Sans";
+  src: url("../fonts/GapSansBold.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Terminal Open";
+  src: url("../fonts/terminal-grotesque_open.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Terminal";
+  src: url("../fonts/terminal-grotesque.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -325,6 +343,8 @@ h3 {
 .info {
   font-weight: 500;
   color: white;
+  padding-top: 1rem;
+  column-count: 2;
 }
 
 .date {
@@ -413,6 +433,7 @@ h3 {
   }
 }*/
 #scroll_top {
+  mix-blend-mode: difference;
   height: 1rem;
   width: 1rem;
   display: none;
@@ -422,7 +443,7 @@ h3 {
   z-index: 10000;
   border: 0px solid lightgrey;
   outline: none;
-  background-color: blue;
+  background-color: #FFFF00;
   color: #9a9999;
   cursor: pointer;
   padding: 1rem;
@@ -602,6 +623,9 @@ h3 {
   }
   .item h3 {
     top: 4rem;
+  }
+  .info {
+    column-count: 1;
   }
 }
 
