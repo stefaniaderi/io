@@ -9,22 +9,33 @@
 
 {% for page in site.pages %}
   {% if page.categories contains 'project' %}    
-<div class="grid" id="progetto">
+
+  {{page.content}} 
+  <div class="grid" id="progetto">
   <div class="dati">
-    <h2 >{{page.title}}</h2> 
+    <h2 >{{page.title}}</h2> &nbsp;
     {% if page.link %}
-        <a class="link" href="{{page.link}}"> 🔗 </a>
+        <a class="link" href="{{page.link}}" style="border-radius: 1rem;
+    border: 1px solid;
+    position: relative;
+    bottom: 1pt;
+    padding: 0.1rem 0.25em 0rem;">🔗</a>
       {% endif%}
     <h3>{{page.subtitle}}</h3>
     <div class="info">
-      {{page.date}} <br>
-      {{page.tags}}
+      <div class="date">
+      {{page.date}} </div>
+      <div class="tag">
+       {% for tag in page.tags %}
+      <!--{{uniqueTags}}-->
+        <li>{{tag}}<!--{% unless forloop.last %},{% endunless %}--></li>&nbsp;
+      {% endfor %}
+    </div>
       
     </div>
   </div>
-  <div class="desc">{{page.description}}</div>
+  <div class="desc">{{page.descIta}}</div>
 </div>
-  {{page.content}} 
   {% endif %}
 {% endfor %}
 

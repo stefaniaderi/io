@@ -94,15 +94,15 @@ $backgroundColor: white;
 $bodyColor: black;
 $lightGrey:lightgrey;
 $midGrey: #9a9999;
-$bodyFont: 'Authentic';
-$serifFont: "Authentic";
+$bodyFont: 'Suisse';
+$serifFont: "Suisse";
 $fontSize: 14px;
 $padding: 1rem;
 $gutter: $padding;
 $border: 0px solid $lightGrey;
 $highlight: blue;
 $transition: 0.5s;
-$headerHeight: 10rem;
+$headerHeight: 12rem;
 $shadow: 0px 0px 22px 13px $lightGrey;
 
 
@@ -168,20 +168,25 @@ h3{
   grid-column: span $columns;
   } 
   &.contents{
-    /*margin-top: ($headerHeight * 2 );*/
+    margin-top: ($headerHeight * 1 );
   }
 }
 .header{
   /*padding: calc(#{$padding} * 3) $padding 0 calc(#{$padding} * 1); */
   padding: 0px;
-  margin: -1rem -1rem -2rem -1rem;
-  position: fixed;
-  width: 220px;
+ /* margin: ($headerHeight + $padding) -1rem -2rem -1rem;*/
+  margin-left: -$padding;
+  position: sticky;
+  /*width: 220px;*/
   /*grid-column: 1 / 12;*/
   height: 110vh;
+  top: 0;
+  left: 0;
+  grid-column: 1 / 4;
   /*background: $midGrey;*/
   border-right: $border;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 400;
 
   ul {
     padding-left: 0px;
@@ -194,8 +199,13 @@ h3{
 .title {
   padding: $padding;
   color: $midGrey;
+  margin: 0rem -1rem -2rem -1rem;
   font-weight: 400;
+  font-size: 24pt;
+  height: $headerHeight;
+  grid-column: 1 / 12; 
   a{
+    position: sticky;
     mix-blend-mode: normal;
     color: white;
     background: $highlight;
@@ -217,10 +227,10 @@ h3{
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 0.9rem;
-    height: 0.9rem;
+    width: 1.2rem;
+    height: 1.2rem;
     position: absolute;
-    margin-top: -1rem;
+    margin-top: -1.2rem;
     right: 0.25rem;
   }
   .bigActive {
@@ -240,6 +250,8 @@ h3{
     margin-top: 1rem;
     background: $midGrey;
     color: white;
+    letter-spacing: 0.07rem;
+    text-transform: uppercase;
     &:hover{
       cursor: pointer;
     }
@@ -252,53 +264,78 @@ h3{
   li {
     margin-top: 0px;
     padding: 0.1rem 1rem 0.1rem 2rem;
-    background: $lightGrey; 
-    a {color: white;}
+    background: white; 
+    display: inline-flex;
+    text-transform: none;
+    letter-spacing: 0rem;
+    a {color: $lightGrey; }
 
     &::after{
       display: none;
     }
+    &::before{
+    display: block;
+    content: "〇 ";
+    font-size: 11pt;
+    position: relative;
+    top: -1px;
+    right: 2px;
+    color: $lightGrey;
+    /*background-image: url(../icons/filter.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1.2rem;
+    height: 1.2rem;
+    position: absolute;
+    margin-top: -1.2rem;
+    right: 0.25rem;*/
+    }
   }
   li:has(> a.active){
     background: white;
+    &::before{
+    content: "◉ ";
+    color: black;
+    }
   }
 }
 
 
 .content{
-  grid-column: 3 / 12;
+  grid-column: 4 / 11;
   opacity: 0;
   display: none;
   height: 0;
   transition: opacity $transition ease-in;
 
   > .grid{
-    $columns: 9;
+    $columns: 8;
       grid-template-columns: repeat($columns, 1fr);
   }
   a {
-    color: $bodyColor;
+    color: white;
   }
 }
 
 .desc {
-  grid-column: 1 / 4;
+  grid-column: 1 / 10;
   border-right: $border;
   padding:0rem 1rem 0rem 1rem;
   > * {
   position: sticky;
-  top:calc(#{$padding}*3);
+  top:$padding;//calc(#{$padding}*3);
   display:block;
   position: -webkit-sticky;
   }
 }
 .info {
   font-weight:500;
-  color: grey;
+  color: white;
 }
 .date {
   font-weight: 500;
-  color:$lightGrey;
+  color:$midGrey;
 }
 .tag {
   margin-top: 0rem;
@@ -307,6 +344,7 @@ h3{
     display: inline-block;
     padding: 0rem 0.1rem;
     border: 1px solid ;
+    color: $lightGrey
   }
 }
 .text-toggle{
@@ -351,7 +389,7 @@ h3{
   padding: 1.4rem 0rem 0rem 2rem;
 }
 .photo{
-  grid-column: 4 / 10;
+  grid-column: 1 / 10;
   a{
     color: $highlight !important;
   }
@@ -407,11 +445,18 @@ h3{
 }
 
 
-.item h3{
+.item{
+  /*grid-column: 1 / 9;*/
+  z-index: 1000;
+  background: blue;
+  box-shadow: 0px 0px 11px 11px blue ;
+  h3{
   position: sticky;
+  padding-top: $padding;
   color: white;
   top: $headerHeight;
   mix-blend-mode: difference;
+  }
 }
 
 .footer{
@@ -467,11 +512,11 @@ h3{
     mix-blend-mode: normal;
     padding: $padding; 
     margin: -1rem;
-    position: fixed;
+    position: sticky;
+    top: $headerHeight;
     z-index: 100;
     line-height: 140%;
     width: 100%;
-    height: $headerHeight;
     transition: $transition;
     align-items: baseline;
     grid-column: 1 / 12;
@@ -497,6 +542,7 @@ h3{
   }
   .bigmenu{
     display: none;
+
   }
   .menu{
     display: block;
