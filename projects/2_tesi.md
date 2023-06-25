@@ -3,7 +3,7 @@ title: Rappresentazione et esercizio
 subtitle: 
 layout: project
 slug: tesi
-tags: [installation, graphic design]
+tags: [graphic design, development]
 categories: [project]
 link: /io/projects/tesi.pdf
 date: 2022—2023
@@ -14,7 +14,7 @@ descIta: 'Il progetto vuole mappare le caratteristiche de degli spartiti grafici
 
 attachments: 'tesi.pdf' 
 ---
-
+![]({{site.baseurl}}/projects/tesi_1.jpg)
 ![]({{site.baseurl}}/projects/tesi_2.jpg)
 ![]({{site.baseurl}}/projects/tesi_5.jpg)
 

@@ -94,8 +94,8 @@ $backgroundColor: white;
 $bodyColor: black;
 $lightGrey:lightgrey;
 $midGrey: #9a9999;
-$bodyFont: 'Suisse';
-$serifFont: "Suisse";
+$accentFont: 'Authentic';
+$bodyFont: "Suisse";
 $fontSize: 14px;
 $padding: 1rem;
 $gutter: $padding;
@@ -116,11 +116,11 @@ body {
   font-size: $fontSize;
   background: $backgroundColor;
   color: $bodyColor;
-  font-family: $bodyFont;
+  font-family: $accentFont;
   font-size: $fontSize;
   & ::selection{
     background: $highlight;
-    color: white;
+    color: $backgroundColor;
   }
 }
 main{ 
@@ -134,7 +134,7 @@ li {
   list-style: none;
 }
 a {  
-  font-family: $bodyFont;
+  font-family: $accentFont;
   text-decoration: none;
   text-underline-offset: 0.3rem;
   color: $highlight;
@@ -162,7 +162,7 @@ h3{
   & p{
     grid-column: 1 / 12;
     padding-bottom: $padding;
-    font-family: $serifFont;
+    font-family: $bodyFont;
     line-height: 148%;
   }
   & > .column {
@@ -182,7 +182,7 @@ h3{
   /*width: 220px;*/
   /*grid-column: 1 / 12;*/
   height: 110vh;
-  top: 0;
+  top: 1.5rem;
   left: 0;
   grid-column: 1 / 4;
   /*background: $midGrey;*/
@@ -208,6 +208,7 @@ h3{
   grid-column: 1 / 12; 
   a{
     position: sticky;
+    top:0;
     mix-blend-mode: normal;
     color: white;
     background: $highlight;
@@ -246,6 +247,7 @@ h3{
     border-color: blue;
   }
   li{
+    font-family: $bodyFont !important;
     width: -webkit-fill-available;
     padding: calc(#{$padding} / 4) 1rem calc(#{$padding} / 4) calc(#{$padding} *1.5);
     border-bottom: 1px solid white;
@@ -263,14 +265,19 @@ h3{
 
 .submenu{
    display: unset;
+   
   li {
+    
     margin-top: 0px;
     padding: 0.1rem 1rem 0.1rem 2rem;
     background: white; 
     display: inline-flex;
     text-transform: none;
     letter-spacing: 0rem;
-    a {color: $lightGrey; }
+    a {
+      color: $lightGrey;
+      font-family: $bodyFont !important;
+    }
 
     &::after{
       display: none;
@@ -321,6 +328,7 @@ h3{
 }
 
 .desc {
+  font-family: $bodyFont;
   grid-column: 1 / 13;
   border-right: $border;
   padding:0rem 1rem 0rem 1rem;
@@ -337,7 +345,7 @@ h3{
 }
 .date {
   font-weight: 500;
-  color:$midGrey;
+  color:$lightGrey;
 }
 .tag {
   margin-top: 0rem;
@@ -427,7 +435,7 @@ h3{
   opacity: 0;
   position: fixed;
   bottom: 2rem;
-  z-index: 104;
+  z-index: 10000;
   border: $border;
   outline: none;
   background-color:blue;
@@ -534,7 +542,7 @@ h3{
     display: contents;
     }
     .title{
-      color: $bodyColor;
+      color: $midGrey;
       padding: 0px;
       grid-column: 1 / 3;
       }
