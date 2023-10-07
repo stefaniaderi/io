@@ -12,9 +12,9 @@
 </head>
 <body>
 <div onclick="topFunction()" id="scroll_top"> </div>
-<main class="grid">
-  <div class="title">
+ <div class="title">
      <a href="{{ site.baseurl }}">{{ site.title }}</a> <br>
+
      {% assign uniqueTags = "" | split: "|" %}
      {% for page in site.pages %}
         {% for tag in page.tags %}
@@ -30,7 +30,9 @@
         {{tag}}{% unless forloop.last %},{% endunless %}
       {% endfor %}
     </div>
-  <div class="header">
+<main class="grid">
+ 
+  <!--<div class="header">
     
     <ul class="bigmenu">
       {% for item in site.data.menu%}
@@ -64,7 +66,7 @@
       {% endfor %}
     </ul>
       </div>
-  </div>
+  </div>-->
 
 
 

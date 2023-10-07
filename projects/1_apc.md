@@ -11,6 +11,7 @@ description: 'The project, winner of the Iuav Student Senate Call for Ideas, inv
 descIta: 'Il progetto, vincitore della Call del Senato degli Studenti Iuav, ha coinvolto circa duecento studenti in un ciclo di cinque talk e un laboratorio in cui i partecipanti sono stati invitati a mettersi nei panni dei sostenitori di quattro frange politiche italiane: sinistra e destra autoritarie, sinistra e destra liberali. Gli ospiti invitati sono stati: Noemi Biasetton, Alessandro Lolli (Effequ), Mattia Salvia (NERO), Alessandro Orlowski, Ruben Pater (Valiz). È in preparazione una pubblicazione che raccoglie gli atti del convegno, in forma digitale (sito web) e cartacea (libro).'
 sort: 1
 attachments: ''
+images: [1.jpg, 2.jpg, 3.jpg, 4.jpg ]
 ---
 ![]({{site.baseurl}}/projects/1.jpg)
 ![]({{site.baseurl}}/projects/2.jpg)

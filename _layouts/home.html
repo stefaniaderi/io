@@ -1,5 +1,6 @@
 {% include header.html %}
 {%assign sortedPosts = site.pages | sort: 'sort'%}
+<div class="contents">
 {% for page in sortedPosts %}
   {% if page.categories contains 'project' or  page.categories contains 'writing' or  page.type contains 'about' %}    
     <div class="content show {{page.layout}} " id="{{page.slug}}">
@@ -8,29 +9,42 @@
             <div class="item">
               <!--href="{{site.baseurl}}{{page.url}}"-->
                 <a name="{{page.slug}}"><h2>{{page.title}}</h2></a>
-
-                <div class="info">{{page.subtitle}}
-                <div class="date">{{page.date}} </div>
+                 <div class="date">{{page.date}} </div>
                 <div class="tag">
                 {% assign tags =  page.tags | join: ','  | split: ',' | uniq %}
                   {% for tag in tags %}
                     <li >{{ tag }}</li>
                   {% endfor %}
                 </div>
+                <div class="info">{{page.subtitle}}
+               
                 </div>
                 {% if page.link %}
                 <a class="link" href="{{page.link}}"> 🔗 </a>
                 {% endif%}
-                <div class="text-toggle"></div> 
+                <div class="text-toggle"> </div> 
                 <div class="info hide" style="">{{page.description}}</div>
 
             </div>
-            <div class="photo">{{page.content}} </div>
+          </div>
+            <div class="outer">
+              <div class='flex-container' id="flex-container">
+              {% assign imgs =  page.images | join: ','  | split: ',' | uniq %}
+                  {% for img in imgs %}
+                    <img class="card" src="{{site.baseurl}}/projects/{{img}}">
+                  {% endfor %}
+              </div>
+            </div>
+            <!--button onclick="clickLeft()">left</button>
+            <button onclick="clickRight()">right</button>
+            <div class="photo">{{page.content}} </div-->
+
                 
         </div>
         
-      </div>
+      
     </div>
   {% endif %}
 {% endfor %}
+</div>
 {% include footer.html %}

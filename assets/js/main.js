@@ -16,13 +16,14 @@ for (var i = 0; i < toggleMoreBtn.length; i++) {
 
 function toggleMore(){
   for (var i = 0; i < toggleMoreBtn.length; i++) {
-  this.classList.toggle('text-toggle_open');
-   this.nextElementSibling.classList.toggle('show');
-   this.nextElementSibling.classList.toggle('hide');
-   console.log(this.nextElementSibling);
+  this.classList.toggle("text-toggle_open");
+  this.nextElementSibling.classList.toggle("show");
+  this.nextElementSibling.classList.toggle("hide");
+   //console.log(this.nextElementSibling);
   }
   
-  console.log('i work');
+  console.log(this.nextElementSibling.classList);
+  
 
 }
 
@@ -174,7 +175,23 @@ function filterDelete() {
     btns[i].classList.remove("filtering");
   }
 }
+function clickLeft() {
+      let container = document.querySelector('#flex-container');
+      container.scrollTo({
+        left:container.scrollLeft - 200,
+        top: 0,
+        behavior: "smooth"
+      });
+    }
 
+    function clickRight() {
+      let container = document.querySelector('#flex-container');
+      container.scrollTo({
+        left:container.scrollLeft + 200,
+        top: 0,
+        behavior: "smooth"
+      });
+    }
 
 /*MULTIFILTER
 function filterSelection(evt) {
