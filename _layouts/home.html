@@ -8,7 +8,10 @@
           <div class="desc">
             <div class="item">
               <!--href="{{site.baseurl}}{{page.url}}"-->
-                <a name="{{page.slug}}"><h2>{{page.title}}</h2></a>
+                <a name="{{page.slug}}"><h2>{{page.title}}</h2></a> 
+                {% if page.link %}
+                <a class="link" href="{{page.link}}"> 🔗 </a>
+                {% endif%}
                  <div class="date">{{page.date}} </div>
                 <div class="tag">
                 {% assign tags =  page.tags | join: ','  | split: ',' | uniq %}
@@ -16,13 +19,12 @@
                     <li >{{ tag }}</li>
                   {% endfor %}
                 </div>
-                <div class="info">{{page.subtitle}}
-               
-                </div>
-                {% if page.link %}
-                <a class="link" href="{{page.link}}"> 🔗 </a>
-                {% endif%}
                 <div class="text-toggle"> </div> 
+
+                <!--div class="info">{{page.subtitle}}
+               
+                </div-->
+                
                 <div class="info hide" style="">{{page.description}}</div>
 
             </div>

@@ -137,6 +137,7 @@ body {
   color: $bodyColor;
   font-family: $accentFont;
   font-size: $fontSize;
+  margin:0px;
   & ::selection{
     background: $highlight;
     color: $backgroundColor;
@@ -222,9 +223,20 @@ h3{
   font-weight: 400;
   font-size: 24pt;
   height: $headerHeight;*/
-  position: absolute;
-  grid-column: 1 / 12; 
-  mix-blend-mode: subtract;
+  z-index: 1111;
+  height: auto;
+  position: fixed;
+  //right: $padding;
+  right: $padding;
+  
+  //mix-blend-mode: subtract;
+  padding: 1rem;
+    //background: #efefef;
+  /*box-shadow: 0px 0px 1px 0px $midGrey;
+  top: 0;
+  border-radius: 0.5rem;
+  border: 1px solid #e7e7e7;
+  backdrop-filter: blur(30px) brightness(1.5) contrast(0.6) saturate(0.1);*/
   a{
     //position: sticky;
     top:0;
@@ -336,6 +348,7 @@ h3{
   height: 100vh;
   overflow: scroll;
   grid-column: 1 / 13;
+  margin-top: 0rem;
 
 }
 .content{
@@ -344,10 +357,11 @@ h3{
   opacity: 0;
   display: none;
   height: 0;
-  margin-top: 1rem;
+  margin-top: 0rem;
+  //padding-top:$padding;
   transition: opacity $transition ease-in;
   scroll-snap-align: start;
-  scroll-padding: 1rem;
+  scroll-padding: 0rem;
 
   > .grid{
     $columns: 8;
@@ -355,6 +369,7 @@ h3{
   }
   a {
     color: black;
+    display:inline-block;
   }
 }
 
@@ -362,14 +377,16 @@ h3{
   margin:1rem;
   position: absolute;
   font-family: $bodyFont;
-  width: 40%;
+  width: 500px;
   //grid-column: 1 / 13;
   border-right: $border;
   padding:0rem 1rem 0rem 0rem;
   //position: sticky;
+  *:hover{cursor: pointer;}
   *:first-of-type{
     margin: 0px;
   }
+
   > * {
   //position: sticky;
   top:$padding;//calc(#{$padding}*3);
@@ -401,7 +418,7 @@ h3{
 }
 .text-toggle{
   &:before{
-    display: block;
+    display: inline-block;
     content: "";
     background-image: url(../icons/more.svg);
     background-position: center;
@@ -409,9 +426,10 @@ h3{
     background-size: contain;
     width: 0.9rem;
     height: 0.9rem;
-    position: relative;
-    left: 0;
-    top: 1rem;
+    position: fixed;
+    bottom: 0rem;
+    right: 0.5rem;
+    //top: 1rem;
     padding-bottom: $padding;
   }&:hover{
     cursor: pointer;
@@ -427,9 +445,9 @@ h3{
     background-size: contain;
     width: 0.9rem;
     height: 0.9rem;
-    position: relative;
-    left: 0;
-    top: 1rem;
+    position: fixed;
+    bottom: 0rem;
+    right: 0.5rem;
     padding-bottom: $padding;
   }&:hover{
     cursor: pointer;
@@ -438,7 +456,7 @@ h3{
 
 .link{
   position: absolute;
-  padding: 1.4rem 0rem 0rem 2rem;
+  padding: 0.4rem 0rem 0rem 0.5rem;
 }
 .photo{
   
@@ -450,10 +468,10 @@ h3{
 .outer {
   //padding-left: $padding;
 
-  border-radius: 1rem;
+  border-radius: 0rem;
       grid-column: 1 / 12;
       overflow-y: hidden;
-      height: calc(100vh - 1rem);
+      height: calc(100vh + 0rem);
       width: 100%;
 
       //border: 1px solid blue;
@@ -461,7 +479,7 @@ h3{
 
     .flex-container {
       scroll-snap-type: x mandatory;
-      border-radius: 1rem;
+      border-radius: 0rem;
       overflow-x: auto;
       display: flex;
       flex-wrap: nowrap;
@@ -469,7 +487,7 @@ h3{
 
     .card {
       scroll-snap-align: start;
-      scroll-padding: 1rem;
+      scroll-padding: 0rem;
       //max-height: 800px;
       display: inline-block;
       margin-right: 5px;
@@ -544,7 +562,8 @@ h3{
     top: 0;
     border-radius: 0.5rem;
     //border: 1px solid #e7e7e7;
-    backdrop-filter: blur(10px) brightness(1.5) contrast(0.5);
+    -webkit-backdrop-filter: blur(40px) brightness(1.1) contrast(0.5) saturate(0.1);
+    backdrop-filter: blur(40px) brightness(4) contrast(0.7) saturate(0.1);
 
   h3{
   position: sticky;
@@ -597,7 +616,7 @@ h3{
   $headerHeight: 2rem;
   $fontSixe: 2rem;
   body{
-    font-size: 12px;
+    font-size: 14px;
   }
   img{
     max-width: 96vw;
@@ -616,6 +635,7 @@ h3{
     transition: $transition;
     align-items: baseline;
     grid-column: 1 / 12;
+
     .title a{
     padding: 0px;
     }
@@ -713,9 +733,13 @@ h3{
       grid-column: 1 / 12;
     }
   }
-  .item h3{
+  .item {
+    -webkit-backdrop-filter: blur(32px) brightness(2) contrast(0.5) saturate(0.1);
+    backdrop-filter: blur(32px) brightness(2) contrast(0.5) saturate(0.1);
+  h3{
     top: $headerHeight * 2;
   }
+}
   .info{
     column-count: 1;
   }

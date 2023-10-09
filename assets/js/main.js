@@ -7,22 +7,37 @@ const menu = document.querySelector('.menu_dropdown');
 let submenu = document.querySelectorAll('.submenu li a');
 let posts = document.querySelectorAll('.content');
 let toggleMoreBtn = document.querySelectorAll('.text-toggle');
+let divDesc = document.querySelectorAll('.item');
 let btns = document.querySelectorAll('.bigmenu li');
 
 //SHOW MORE TEXT
-for (var i = 0; i < toggleMoreBtn.length; i++) {
-    toggleMoreBtn[i].addEventListener("click", toggleMore);
+for (var i = 0; i < divDesc.length; i++) {
+    divDesc[i].addEventListener("click", toggleMore);
   }
 
 function toggleMore(){
-  for (var i = 0; i < toggleMoreBtn.length; i++) {
-  this.classList.toggle("text-toggle_open");
-  this.nextElementSibling.classList.toggle("show");
-  this.nextElementSibling.classList.toggle("hide");
-   //console.log(this.nextElementSibling);
-  }
   
-  console.log(this.nextElementSibling.classList);
+  
+  
+  const childrenx = this.children;
+  console.log(childrenx);
+  for (var j = 0; j < childrenx.length; j++){
+    //console.log(childrenx[j]);
+    if (childrenx[j].classList.contains('info')){
+      childrenx[j].classList.toggle("show");
+      childrenx[j].classList.toggle("hide");
+      //console.log(childrenx[j]);    
+    }
+    if (childrenx[j].classList.contains("text-toggle")){
+      childrenx[j].classList.toggle("text-toggle_open");
+    }
+  }
+  //this.nextElementSibling.classList.toggle("show");
+  //this.nextElementSibling.classList.toggle("hide");
+   //console.log(this.nextElementSibling);
+  
+  
+  //console.log(this.classList);
   
 
 }
