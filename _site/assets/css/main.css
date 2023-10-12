@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Suisse";
   src: url("../fonts/SuisseIntl-Book.otf") format("opentype");
@@ -7,15 +6,45 @@
 }
 @font-face {
   font-family: "Suisse";
-  src: url("../fonts/SuisseIntl-SemiBold.otf") format("opentype");
+  src: url("../fonts/SuisseIntl-BookItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Suisse";
+  src: url("../fonts/SuisseIntl-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: "Suisse Neue";
-  src: url("../fonts/SuisseNeue-Light.otf") format("opentype");
-  font-weight: 400;
+  font-family: "Suisse";
+  src: url("../fonts/SuisseIntl-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Suisse";
+  src: url("../fonts/SuisseIntl-Regular.otf") format("opentype");
+  font-weight: 300;
   font-style: normal;
+}
+@font-face {
+  font-family: "Suisse";
+  src: url("../fonts/SuisseIntl-RegularItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Suisse";
+  src: url("../fonts/SuisseIntl-Bold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Suisse";
+  src: url("../fonts/SuisseIntl-BoldItalic.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
 }
 @font-face {
   font-family: "Suisse Works";
@@ -521,7 +550,7 @@ img.card:last-of-type {
   /* grid-column: 1 / 9; */
   padding: 1rem;
   z-index: 1000;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12);
   top: 0;
   border-radius: 0.5rem;
   -webkit-backdrop-filter: blur(40px) brightness(1.5) contrast(0.5) saturate(0.1);
@@ -565,13 +594,16 @@ img.card:last-of-type {
   color: white;
   transition: width 0s, opacity 0s;
   max-height: 30px;
-  padding: 0rem 2rem;
+  padding-right: 2rem !important;
+  padding-left: 2rem;
 }
 .bio strong {
   font-size: 2rem;
+  font-weight: 300;
 }
 .bio ul {
   margin-top: 1rem;
+  padding: 0rem;
 }
 .bio li {
   list-style: none;
@@ -602,7 +634,7 @@ img.card:last-of-type {
   color: white;
   top: 1rem;
   background: blue;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .close a#mytitle {
   font-weight: 400;
@@ -610,6 +642,12 @@ img.card:last-of-type {
   border-radius: 2rem;
   color: blue;
   background: #efefef;
+}
+.close a#mytitle:hover {
+  background: blue;
+  color: white;
+  font-size: 1.7rem;
+  transition: 0.5s;
 }
 
 .open {
@@ -626,7 +664,7 @@ img.card:last-of-type {
   transition: width 0s, opacity 0.8s ease 0.5s;
   overflow: hidden;
   max-height: 100%;
-  margin-top: 3rem;
+  margin-top: 6rem;
 }
 .open a {
   padding: 0rem 0.75rem;
@@ -823,5 +861,3 @@ img.card:last-of-type {
     transform-origin: 100% 0%;
   }
 }
-
-/*# sourceMappingURL=main.css.map */

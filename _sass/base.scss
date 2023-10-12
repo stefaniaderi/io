@@ -1,22 +1,50 @@
-
 @font-face {
   font-family: "Suisse";
   src: url("../fonts/SuisseIntl-Book.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Suisse";
-  src: url("../fonts/SuisseIntl-SemiBold.otf") format("opentype");
+  src: url("../fonts/SuisseIntl-BookItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Suisse";
+  src: url("../fonts/SuisseIntl-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: "Suisse Neue";
-  src: url("../fonts/SuisseNeue-Light.otf") format("opentype");
-  font-weight: 400;
+  font-family: "Suisse";
+  src: url("../fonts/SuisseIntl-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Suisse";
+  src: url("../fonts/SuisseIntl-Regular.otf") format("opentype");
+  font-weight: 300;
   font-style: normal;
+}
+@font-face {
+  font-family: "Suisse";
+  src: url("../fonts/SuisseIntl-RegularItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Suisse";
+  src: url("../fonts/SuisseIntl-Bold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Suisse";
+  src: url("../fonts/SuisseIntl-BoldItalic.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
 }
 @font-face {
   font-family: "Suisse Works";
@@ -562,7 +590,7 @@ h3{
     padding: 1rem;
     z-index: 1000;
     //background: #efefef;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.12);
     top: 0;
     border-radius: 0.5rem;
     //border: 1px solid #e7e7e7;
@@ -610,13 +638,16 @@ h3{
   //column-count: 2;
   transition: width 0s, opacity 0s  ;
   max-height: 30px ;
-  padding:0rem 2rem;
+  padding-right: 2rem !important;
+  padding-left:2rem;
 
   strong{
     font-size: 2rem;
+    font-weight: 300;
   }
   ul{
     margin-top: 1rem;
+    padding: 0rem;
 
   }
   li{
@@ -650,7 +681,8 @@ border-radius: 2rem;
     color: white;
     top: 1rem;
     background: blue;
-    font-size: 2rem;}
+    font-size: 1.5rem;
+    }
 
     a#mytitle{
 
@@ -660,6 +692,12 @@ border-radius: 2rem;
       color: blue;
       background: #efefef;
       //position: fixed;
+      &:hover{
+      background: blue;
+      color: white;
+      font-size: 1.7rem;
+      transition: $transition
+    }
     }
 
   
@@ -677,7 +715,7 @@ border-radius: 2rem;
     transition: width 0s, opacity 0.8s ease 0.5s ;
     overflow: hidden;
     max-height: 100% ;
-    margin-top: 3rem;
+    margin-top: 6rem;
 
   }
  a{
