@@ -12,10 +12,10 @@
 </head>
 <body>
 <div onclick="topFunction()" id="scroll_top"> </div>
- <div class="title">
-     <a href="{{ site.baseurl }}">{{ site.title }}</a> <br>
-
-     {% assign uniqueTags = "" | split: "|" %}
+ <div class="title scale-up-tr">
+     <a href="{{ site.baseurl }}">〄</a> <br>
+     <div class="bio"><h2>{{site.title}}</h2>{{ page.bio }}</div>
+      {% assign uniqueTags = "" | split: "|" %}
      {% for page in site.pages %}
         {% for tag in page.tags %}
           <!--{{tag}}-->
