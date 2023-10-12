@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Suisse";
   src: url("../fonts/SuisseIntl-Book.otf") format("opentype");
@@ -861,3 +862,5 @@ img.card:last-of-type {
     transform-origin: 100% 0%;
   }
 }
+
+/*# sourceMappingURL=main.css.map */
