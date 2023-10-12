@@ -9,6 +9,22 @@ let posts = document.querySelectorAll('.content');
 let toggleMoreBtn = document.querySelectorAll('.text-toggle');
 let divDesc = document.querySelectorAll('.item');
 let btns = document.querySelectorAll('.bigmenu li');
+let title = document.getElementById('mytitle');
+
+  title.addEventListener("click", (e) => {
+  console.log(title);
+  title.parentNode.classList.toggle('open');
+  title.parentNode.classList.toggle('close');
+  for (var y = 0; y < title.parentNode.children.length; y++){
+    //console.log(childrenx[y]);
+    if (title.parentNode.children[y].classList.contains('bio')){
+      title.parentNode.children[y].classList.toggle("open");
+
+      //childrenx[y].classList.toggle("close");
+      //console.log(childrenx[y]);    
+    }
+  }
+  });
 
 //SHOW MORE TEXT
 for (var i = 0; i < divDesc.length; i++) {
@@ -207,6 +223,13 @@ function clickLeft() {
         behavior: "smooth"
       });
     }
+
+const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+if (width< 800) {
+  console.log('smol');
+
+}
 
 /*MULTIFILTER
 function filterSelection(evt) {
