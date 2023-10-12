@@ -595,6 +595,13 @@ img.card:last-of-type {
   /*-webkit-backdrop-filter: blur(76px) brightness(0.7) contrast(0.9) hue-rotate(73deg);
   backdrop-filter: blur(76px) brightness(0.7) contrast(0.9) hue-rotate(73deg);*/
 }
+.scale-up-tr a.mytitle {
+  font-weight: 400;
+  border: 2px solid blue !important;
+  border-radius: 2rem;
+  color: blue;
+  background: #efefef;
+}
 .scale-up-tr:hover {
   background: blue;
   height: 100vh;
@@ -612,8 +619,15 @@ img.card:last-of-type {
   max-height: 100%;
   margin-top: 3rem;
 }
+.scale-up-tr:hover a.mytitle {
+  border: 2px solid white !important;
+  border-radius: 2rem;
+  color: white;
+  font-weight: 400;
+  background: none;
+}
 .scale-up-tr a {
-  padding: 0rem 0.5rem;
+  padding: 0rem 0.75rem;
   position: fixed;
   right: 1rem;
   color: white;

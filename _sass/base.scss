@@ -611,6 +611,7 @@ h3{
   transition: width 0s, opacity 0s  ;
   max-height: 30px ;
   padding:0rem 1rem;
+
   strong{
     font-size: 2rem;
   }
@@ -643,6 +644,14 @@ h3{
     /*-webkit-backdrop-filter: blur(76px) brightness(0.7) contrast(0.9) hue-rotate(73deg);
     backdrop-filter: blur(76px) brightness(0.7) contrast(0.9) hue-rotate(73deg);*/
     
+    a.mytitle{
+      font-weight: 400;
+      border: 2px solid blue !important;
+      border-radius: 2rem;
+      color: blue;
+      background: #efefef;
+      //position: fixed;
+    }
 
   &:hover{
     background: blue;
@@ -658,19 +667,29 @@ h3{
     max-height: 100% ;
     margin-top: 3rem;
 
-
+  
 
   }
+
+  a.mytitle{
+      border: 2px solid white !important;
+      border-radius: 2rem;
+      color: white;
+      font-weight: 400;
+      background: none;
+      //position: fixed;
+    }
   /*-webkit-animation: scale-up-tr 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
           animation: scale-up-tr 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;}*/}
   & a{
-    padding: 0rem 0.5rem;
+    padding: 0rem 0.75rem;
     position: fixed;
     right: $padding;
     color: white;
     top: 1rem;
     background: blue;
     font-size: 2rem;
+    
   }
 }
 
