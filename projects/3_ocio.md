@@ -10,7 +10,7 @@ link: http://ocio-venezia.it
 description: 'Ocio is an association in Venice that does activism on the issue of residency in the city. I designed an easily navigable website for them, including a glossary, to give readers the tools to better understand the technical vocabulary of residency.'
 descIta: "Ocio è un'associazione di Venezia che fa attivismo sul tema della residenzialità in città. Per loro ho progettato un sito web facilmente navigabile, che comprendesse un glossario, per dare ai lettori gli strumenti per comprendere meglio il vocabolario tecnico della residenzialità."
 
-sort: 
+sort: 3
 images: [ocio_1.jpg, ocio_2.jpg, ocio_3.jpg, ocio_4.jpg]
 
 
