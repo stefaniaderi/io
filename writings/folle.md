@@ -8,6 +8,7 @@ date: 2022
 sort: 4
 description: 'Il saggio confronta il concetto di “folla” così come analizzato da Gustave Le Bon nel 1985 nel saggio Psicologia delle folle con quello degli studiosi Heimans e Timms nel saggio New Power, del 2018 dopo l’affermarsi delle ICT. Il testo evidenzia che i maggiori cambiamenti sono dovuti all’abbassamento della soglia di partecipazione a causa dei social network. Per verificare le ipotesi teoriche si analizzerà il caso di cronaca dell’attacco al Campidoglio statunitense del 6 Gennaio 2021. Le folle sono un fenomeno di cui si deve tener conto in un’epoca in cui queste sono capaci di segnare profondamente il bilancio politico di uno Stato (Gentile 2017) poiché la loro crescente partecipazione potrebbe segnare un cambiamento dell’equilibrio democratico a cui siamo abituati.'
 categories: [writing]
+hide: 'yes'
 ---
 ### Perché la necessità di una rilettura
 Nel 1895, agli albori della nascita dei movimenti operari in Francia, Gustave Le Bon pubblica Psicologia delle folle, testo che secondo Emilio Gentile (2017) rappresenta l’opera parallela al Principe di Machiavelli nel XIX secolo, dato che si proponeva di insegnare ai capi come conquistare e governare le folle; Mussolini stesso affermò infatti di aver letto il saggio e di averlo apprezzato. Nel testo Le Bon formula l’espressione “era delle folle” per descrivere con toni aspri il fenomeno che vede le masse di

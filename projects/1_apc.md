@@ -12,6 +12,7 @@ descIta: 'Il progetto, vincitore della Call del Senato degli Studenti Iuav, ha c
 sort: 1
 attachments: ''
 images: [1.jpg, 2.jpg, 3.jpg, 4.jpg ]
+hide: 
 ---
 ![]({{site.baseurl}}/projects/1.jpg)
 ![]({{site.baseurl}}/projects/2.jpg)

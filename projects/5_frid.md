@@ -11,5 +11,6 @@ description: 'The annual national conference on research in design, organized by
 descIta: "L'annuale conferenza nazionale sulla ricerca in design, organizzata dalla Scuola di Dottorato Iuav. Ho progettato l'identità visiva dell'anno 2023, sul tema delle parole chiave della ricerca in design, e curato la comunicazione sui social media."
 
 images: [frid1.jpg]
+hide: 'yes'
 ---
 ![]({{site.baseurl}}/projects/frid1.jpg)

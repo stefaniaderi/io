@@ -2,7 +2,7 @@
 {%assign sortedPosts = site.pages | sort: 'sort'%}
 <div class="contents">
 {% for page in sortedPosts %}
-  {% if page.categories contains 'project' or  page.categories contains 'writing' or  page.type contains 'about' %}    
+  {% if page.hide !='yes' and page.categories contains 'project' or  page.categories contains 'writing' %}    
     <div class="content show {{page.layout}} " id="{{page.slug}}">
       <div class="grid">
           <div class="desc">
