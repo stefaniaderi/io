@@ -13,8 +13,16 @@
 <body>
 <div onclick="topFunction()" id="scroll_top"> </div>
  <div class="title scale-up-tr">
-     <a href="{{ site.baseurl }}">〄</a> <br>
-     <div class="bio"><h2>{{site.title}}</h2>{{ page.bio }}</div>
+     <a href="{{ site.baseurl }}">Stefania D'Eri</a> <br>
+     <div class="bio"><strong>{{ page.claim }}</strong>
+      <div class="contact"> 
+        <ul>
+        {% for contact in page.contact %}
+            <li>{{contact}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+     </div>
       {% assign uniqueTags = "" | split: "|" %}
      {% for page in site.pages %}
         {% for tag in page.tags %}

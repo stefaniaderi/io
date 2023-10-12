@@ -603,16 +603,33 @@ h3{
 .bio{
   opacity: 0;
   color: white;
-  column-count: 2;
+  //column-count: 2;
   transition: width 0s, opacity 0s  ;
   max-height: 30px ;
   padding:0rem 1rem;
+  strong{
+    font-size: 2rem;
+  }
+  ul{
+    margin-top: 1rem;
+
+  }
+  li{
+    list-style: none;
+  }
+  .contact>ul>li> a{
+    font-size: 1rem;
+    color: white;
+    text-decoration: underline;
+    position: unset !important;
+    padding: 0px;
+  }
 
 
 }
 .scale-up-tr {
     border-radius: 2rem;
-    background: blue;
+    //background: blue;
     position: fixed;
     right: 1rem;
     top: 1rem;
@@ -621,9 +638,10 @@ h3{
     transition: height 0.2s, width 0.2s;
     /*-webkit-backdrop-filter: blur(76px) brightness(0.7) contrast(0.9) hue-rotate(73deg);
     backdrop-filter: blur(76px) brightness(0.7) contrast(0.9) hue-rotate(73deg);*/
+    
 
   &:hover{
-
+    background: blue;
     height: 100vh;
     width: 50vw;
     transition: width 0.3s, height 0.5s ease 0.2s ;
@@ -642,11 +660,12 @@ h3{
   /*-webkit-animation: scale-up-tr 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
           animation: scale-up-tr 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;}*/}
   & a{
-    padding: 1rem 0.5rem 1rem 0rem;
+    padding: 0rem 0.5rem;
     position: fixed;
     right: $padding;
     color: white;
-    background: none;
+    top: 1rem;
+    background: blue;
     font-size: 2rem;
   }
 }

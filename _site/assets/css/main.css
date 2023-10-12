@@ -559,15 +559,29 @@ img.card:last-of-type {
 .bio {
   opacity: 0;
   color: white;
-  column-count: 2;
   transition: width 0s, opacity 0s;
   max-height: 30px;
   padding: 0rem 1rem;
 }
+.bio strong {
+  font-size: 2rem;
+}
+.bio ul {
+  margin-top: 1rem;
+}
+.bio li {
+  list-style: none;
+}
+.bio .contact > ul > li > a {
+  font-size: 1rem;
+  color: white;
+  text-decoration: underline;
+  position: unset !important;
+  padding: 0px;
+}
 
 .scale-up-tr {
   border-radius: 2rem;
-  background: blue;
   position: fixed;
   right: 1rem;
   top: 1rem;
@@ -578,6 +592,7 @@ img.card:last-of-type {
   backdrop-filter: blur(76px) brightness(0.7) contrast(0.9) hue-rotate(73deg);*/
 }
 .scale-up-tr:hover {
+  background: blue;
   height: 100vh;
   width: 50vw;
   transition: width 0.3s, height 0.5s ease 0.2s;
@@ -594,11 +609,12 @@ img.card:last-of-type {
   margin-top: 3rem;
 }
 .scale-up-tr a {
-  padding: 1rem 0.5rem 1rem 0rem;
+  padding: 0rem 0.5rem;
   position: fixed;
   right: 1rem;
   color: white;
-  background: none;
+  top: 1rem;
+  background: blue;
   font-size: 2rem;
 }
 
