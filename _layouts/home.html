@@ -1,6 +1,6 @@
 {% include header.html %}
 {%assign sortedPosts = site.pages | sort: 'sort'%}
-<div class="contents">
+<div class="contents" style="overscroll-behavior: none;">
 {% for page in sortedPosts %}
   {% if page.hide !='yes' and page.categories contains 'project' or  page.categories contains 'writing' %}    
     <div class="content show {{page.layout}} " id="{{page.slug}}">
