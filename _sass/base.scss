@@ -594,8 +594,9 @@ h3{
     top: 0;
     border-radius: 0.5rem;
     //border: 1px solid #e7e7e7;
-    -webkit-backdrop-filter: blur(40px) brightness(1.5) contrast(0.5) saturate(0.1);
-    backdrop-filter: blur(40px) brightness(6) contrast(0.7) saturate(0.1);
+    //-webkit-backdrop-filter: blur(1.7px) brightness(62.2) contrast(0.5) saturate(0);
+    //backdrop-filter: blur(1.7px) brightness(62.2) contrast(0.5) saturate(0);
+    background: #d6d6d6;
 
   h3{
   position: sticky;
