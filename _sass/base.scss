@@ -147,7 +147,7 @@ $fontSize: 14px;
 $padding: 1rem;
 $gutter: $padding;
 $border: 0px solid $lightGrey;
-$highlight: blue;
+$highlight: tomato;
 $transition: 0.5s;
 $headerHeight: 12rem;
 $shadow: 0px 0px 22px 13px $lightGrey;
@@ -302,9 +302,9 @@ h3{
     border-color: black;
   }
     .filtering {
-    background: blue;
+    background: tomato;
     color: white;
-    border-color: blue;
+    border-color: tomato;
   }
   li{
     font-family: $bodyFont !important;
@@ -403,13 +403,15 @@ h3{
 }
 
 .desc {
-  margin:1rem;
+  left:1rem;
+  bottom:1rem;
   position: absolute;
   font-family: $bodyFont;
-  width: calc(50vw - 4rem);
+  width: 50%;
   //grid-column: 1 / 13;
   border-right: $border;
   padding:0rem 1rem 0rem 0rem;
+  transition: height 1s ease-in-out;
   //position: sticky;
   *:hover{cursor: pointer;}
   *:first-of-type{
@@ -432,10 +434,11 @@ h3{
 }
 .date {
   font-weight: 500;
-  color:white;
+  color:#7a7a7a;
 }
 .tag {
-  margin-top: 0rem;
+  margin-top: 0.1rem;
+  margin-left: -0.1rem;
   li{
     margin:0.25rem;
     display: inline-block;
@@ -504,7 +507,7 @@ h3{
       width: calc(100vw + 0rem);
       overscroll-behavior-x: none;
 
-      //border: 1px solid blue;
+      //border: 1px solid tomato;
     }
 
     .flex-container {
@@ -518,7 +521,7 @@ h3{
     }
 
     .card {
-      scroll-snap-align: start;
+      //scroll-snap-align: start;
       scroll-padding: 0rem;
       //max-height: 800px;
       display: inline-block;
@@ -593,10 +596,11 @@ h3{
     box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.12);
     top: 0;
     border-radius: 0.5rem;
-    //border: 1px solid #e7e7e7;
-    //-webkit-backdrop-filter: blur(1.7px) brightness(62.2) contrast(0.5) saturate(0);
-    //backdrop-filter: blur(1.7px) brightness(62.2) contrast(0.5) saturate(0);
-    background: #d6d6d6;
+    border: 1px solid #e7e7e7;
+    -webkit-backdrop-filter: blur(19.7px) brightness(1.1) contrast(0.8) saturate(1);
+    backdrop-filter: blur(19.7px) brightness(1.1) contrast(0.8) saturate(1);
+    background: #ffffff8c;
+
 
   h3{
   position: sticky;
@@ -666,7 +670,7 @@ h3{
 }
 .close{
 border-radius: 2rem;
-    //background: blue;
+    //background: tomato;
     position: fixed;
     right: 1rem;
     top: 1rem;
@@ -681,22 +685,22 @@ border-radius: 2rem;
     right: $padding;
     color: white;
     top: 1rem;
-    background: blue;
-    font-size: 1.5rem;
+    background: tomato;
+    font-size: 1.3rem;
     }
 
     a#mytitle{
 
       font-weight: 400;
-      border: 2px solid blue !important;
+      border: 1px solid tomato !important;
       border-radius: 2rem;
-      color: blue;
-      background: #efefef;
+      color: tomato;
+      background: none;
       //position: fixed;
       &:hover{
-      background: blue;
+      background: tomato;
       color: white;
-      font-size: 1.7rem;
+      font-size: 1.3rem;
       transition: $transition
     }
     }
@@ -704,7 +708,7 @@ border-radius: 2rem;
   
 }
 .open{
-    background: blue;
+    background: tomato;
     height: 100vh;
     width: 50vw;
     transition: width 0.3s, height 0.5s ease 0.2s ;
@@ -725,7 +729,7 @@ border-radius: 2rem;
     right: $padding;
     color: white;
     top: 1rem;
-    background: blue;
+    background: tomato;
     font-size: 2rem;}
  
     a#mytitle{
