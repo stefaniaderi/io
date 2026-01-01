@@ -406,16 +406,17 @@ h3 {
 }
 
 .tag {
-  margin-top: 0.1rem;
+  margin-top: 0.3rem;
   margin-left: -0.1rem;
 }
 .tag li {
-  margin: 0.25rem;
+  font-size: 0.9em;
+  margin: 0rem;
   display: inline-block;
-  padding: 0rem 0.25rem;
+  padding: 0.05rem 0.3rem 0.09rem 0.3rem;
   border: 1px solid;
   border-radius: 0.75rem;
-  color: #5b5b5b;
+  color: #6c6c6c;
 }
 
 .text-toggle:before {
