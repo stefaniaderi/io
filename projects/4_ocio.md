@@ -11,11 +11,13 @@ description: 'Ocio is an association in Venice that does activism on the issue o
 descIta: "Ocio è un'associazione di Venezia che fa attivismo sul tema della residenzialità in città. Per loro ho progettato un sito web facilmente navigabile, che comprendesse un glossario, per dare ai lettori gli strumenti per comprendere meglio il vocabolario tecnico della residenzialità."
 
 sort: 3
-images: [ocio_1.jpg, ocio_2.jpg, ocio_3.jpg, ocio_4.jpg]
+images: [ocio_01.png, ocio_1.jpg, ocio_2.jpg, ocio_4.jpg]
 
 
 ---
 ![]({{site.baseurl}}/projects/ocio.jpg)
+![]({{site.baseurl}}/projects/ocio_01.png)
+
 <video width="100%" preload="auto" muted controls loop>
     <source src="{{site.baseurl}}/projects/ocio.mov" type="video/mp4"/>
 </video>

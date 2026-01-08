@@ -1,13 +1,25 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Suisse";
-  src: url("../fonts/SuisseIntl-Book.otf") format("opentype");
+  src: url("../fonts/SuisseIntl-Thin.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Suisse";
+  src: url("../fonts/SuisseIntl-ThinItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Suisse";
+  src: url("../fonts/SuisseIntl-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Suisse";
-  src: url("../fonts/SuisseIntl-BookItalic.otf") format("opentype");
+  src: url("../fonts/SuisseIntl-RegularItalic.otf") format("opentype");
   font-weight: 400;
   font-style: italic;
 }
@@ -21,18 +33,6 @@
   font-family: "Suisse";
   src: url("../fonts/SuisseIntl-MediumItalic.otf") format("opentype");
   font-weight: 500;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Suisse";
-  src: url("../fonts/SuisseIntl-Regular.otf") format("opentype");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Suisse";
-  src: url("../fonts/SuisseIntl-RegularItalic.otf") format("opentype");
-  font-weight: 300;
   font-style: italic;
 }
 @font-face {
@@ -60,76 +60,22 @@
   font-style: italic;
 }
 @font-face {
-  font-family: "Apple Garamond";
-  src: url("../fonts/AppleGaramond-Light.ttf") format("truetype");
+  font-family: "Suisse Mono";
+  src: url("../fonts/SuisseIntlMono-Thin.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Suisse Mono";
+  src: url("../fonts/SuisseIntlMono-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Authentic";
-  src: url("../fonts/AUTHENTICSans-60.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Authentic";
-  src: url("../fonts/AUTHENTICSans-90.otf") format("opentype");
+  font-family: "Suisse Mono";
+  src: url("../fonts/SuisseIntlMono-Bold.otf") format("opentype");
   font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Authentic";
-  src: url("../fonts/AUTHENTICSans-130.otf") format("opentype");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Authentic";
-  src: url("../fonts/AUTHENTICSans-150.otf") format("opentype");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Authentic Condensed";
-  src: url("../fonts/AUTHENTICSans-Condensed-60.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Authentic Condensed";
-  src: url("../fonts/AUTHENTICSans-Condensed-90.otf") format("opentype");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Authentic Condensed";
-  src: url("../fonts/AUTHENTICSans-Condensed-130.otf") format("opentype");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Authentic Condensed";
-  src: url("../fonts/AUTHENTICSans-Condensed-150.otf") format("opentype");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Gap Sans";
-  src: url("../fonts/GapSansBold.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Terminal Open";
-  src: url("../fonts/terminal-grotesque_open.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Terminal";
-  src: url("../fonts/terminal-grotesque.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
+  font-style: italic;
 }
 @keyframes fadeIn {
   0% {
@@ -170,7 +116,7 @@ a {
 }
 a:hover {
   color: tomato;
-  transition: 0.5s;
+  transition: 0.5s ease-in-out;
 }
 
 h1 {
@@ -359,7 +305,7 @@ h3 {
   display: none;
   height: 0;
   margin-top: 0rem;
-  transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in-out ease-in;
   scroll-snap-align: start;
   scroll-padding: 0rem;
 }
@@ -373,19 +319,17 @@ h3 {
 
 .desc {
   left: 1rem;
-  bottom: 1rem;
-  position: absolute;
+  top: 0rem;
+  position: sticky;
   font-family: "Suisse";
-  width: 50%;
+  width: 50vw;
   border-right: 0px solid lightgrey;
   padding: 0rem 1rem 0rem 0rem;
   transition: height 1s ease-in-out;
+  z-index: 1000;
 }
 .desc *:hover {
   cursor: pointer;
-}
-.desc *:first-of-type {
-  margin: 0px;
 }
 .desc > * {
   top: 1rem;
@@ -401,19 +345,20 @@ h3 {
 }
 
 .date {
-  font-weight: 500;
+  font-weight: 400;
   color: #7a7a7a;
+  font-family: "Suisse Mono";
 }
 
 .tag {
-  margin-top: 0.3rem;
+  font-family: "Suisse Mono";
   margin-left: -0.1rem;
 }
 .tag li {
-  font-size: 0.9em;
-  margin: 0rem;
+  font-size: 0.7em;
+  margin: -0.2rem !important;
   display: inline-block;
-  padding: 0.05rem 0.3rem 0.09rem 0.3rem;
+  padding: 0.05em 0.3em 0.09em 0.3em;
   border: 1px solid;
   border-radius: 0.75rem;
   color: #6c6c6c;
@@ -540,7 +485,7 @@ img.card:last-of-type {
   padding: 1rem;
   border-radius: 6rem;
   /* filter: drop-shadow(0px 0px 6px $color-light); */
-  transition: 0.5s;
+  transition: 0.5s ease-in-out;
   content: "";
   align-content: center;
   background-position: center;
@@ -551,7 +496,6 @@ img.card:last-of-type {
 }
 
 .item {
-  /* grid-column: 1 / 9; */
   padding: 1rem;
   z-index: 1000;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12);
@@ -560,7 +504,9 @@ img.card:last-of-type {
   border: 1px solid #e7e7e7;
   -webkit-backdrop-filter: blur(19.7px) brightness(1.1) contrast(0.8) saturate(1);
   backdrop-filter: blur(19.7px) brightness(1.1) contrast(0.8) saturate(1);
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  width: 50vw;
 }
 .item h3 {
   position: sticky;
@@ -606,7 +552,7 @@ img.card:last-of-type {
 }
 .bio strong {
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 .bio ul {
   margin-top: 1rem;
@@ -640,23 +586,17 @@ img.card:last-of-type {
   right: 1rem;
   color: white;
   top: 1rem;
-  background: tomato;
   font-size: 1.3rem;
 }
 .close a#mytitle {
   backdrop-filter: blur(19.7px) brightness(1.1) contrast(0.8) saturate(1);
-  background: rgba(255, 255, 255, 0.4);
-  font-weight: 400;
-  border: 0.5px solid tomato !important;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.5647058824);
+  border: 1px solid darkgrey;
   border-radius: 1rem;
-  color: tomato;
 }
 .close a#mytitle:hover {
-  background: tomato;
-  color: white;
-  font-size: 1.3rem;
-  transition: 0.5s;
+  font-size: 1.5rem;
+  transition: 0.5s ease-in-out;
 }
 
 .open {
@@ -669,6 +609,7 @@ img.card:last-of-type {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11), 0 4px 4px rgba(0, 0, 0, 0.11), 0 8px 8px rgba(0, 0, 0, 0.11), 0 16px 16px rgba(0, 0, 0, 0.11), 0 32px 32px rgba(0, 0, 0, 0.11);
 }
 .open.bio {
+  width: auto;
   opacity: 1;
   transition: width 0s, opacity 0.8s ease 0.5s;
   overflow: hidden;
@@ -699,7 +640,7 @@ img.card:last-of-type {
   height: auto;
   opacity: 1 !important;
   display: block;
-  transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-in-out ease-out;
 }
 
 .hide {
@@ -724,7 +665,7 @@ img.card:last-of-type {
     z-index: 100;
     line-height: 140%;
     width: 100%;
-    transition: 0.5s;
+    transition: 0.5s ease-in-out;
     align-items: baseline;
     grid-column: 1/12;
   }
@@ -825,15 +766,14 @@ img.card:last-of-type {
   }
   .desc {
     grid-column: 1/12;
-    width: calc(100% - 2rem);
+    width: 100vw;
   }
   .desc > * {
-    position: relative;
     grid-column: 1/12;
   }
   .item {
-    -webkit-backdrop-filter: blur(32px) brightness(2) contrast(0.5) saturate(0.1);
-    backdrop-filter: blur(32px) brightness(2) contrast(0.5) saturate(0.1);
+    width: calc(100vw - 2rem);
+    margin-bottom: 1rem;
   }
   .item h3 {
     top: 4rem;

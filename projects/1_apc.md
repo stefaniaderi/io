@@ -3,7 +3,7 @@ layout: project
 title: Al Perpetuo Crepuscolo
 subtitle: 
 slug: apc
-tags: [curatorship, graphic design, web design, development]
+tags: [curatorship, web design, development]
 categories: [project]
 date: 2022—2023
 link: https://deprunit.github.io/apc/
